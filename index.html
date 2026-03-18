@@ -62,7 +62,15 @@ box-shadow: none;
 padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 }
 .hdr {
-padding-top: calc(env(safe-area-inset-top, 50px) + 10px);
+padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+}
+/* Modalità web app standalone: il notch non è gestito, serve padding fisso */
+body.standalone .hdr {
+padding-top: calc(env(safe-area-inset-top, 47px) + 16px);
+}
+/* Fallback se safe-area non funziona in standalone */
+body.standalone-fallback .hdr {
+padding-top: 60px;
 }
 
 }
@@ -1004,6 +1012,28 @@ ptr.style.opacity=‘0’;
 setTimeout(function(){ptr.style.transition=’’;},350);
 }
 });
+})();
+
+// Rileva modalità web app standalone
+(function(){
+var isStandalone = (window.navigator.standalone === true) ||
+(window.matchMedia(’(display-mode: standalone)’).matches) ||
+(window.matchMedia(’(display-mode: fullscreen)’).matches);
+if(isStandalone){
+// Verifica se safe-area-inset-top funziona
+var test = getComputedStyle(document.documentElement).getPropertyValue(’–sat’);
+document.body.classList.add(‘standalone’);
+// Se safe-area-inset-top = 0 in standalone (bug Safari vecchio), usa fallback
+setTimeout(function(){
+var hdr = document.querySelector(’.hdr’);
+if(hdr){
+var pt = parseInt(getComputedStyle(hdr).paddingTop);
+if(pt < 40){
+document.body.classList.add(‘standalone-fallback’);
+}
+}
+}, 100);
+}
 })();
 
 // INIT
