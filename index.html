@@ -27,23 +27,27 @@ position:relative;}
 
 /* Mobile: full screen, niente frame */
 @media (max-width: 430px) {
-html, body {
+html { height: 100%; }
+body {
+display: block;
 margin: 0; padding: 0;
 width: 100%; height: 100%;
 background: var(–card);
 }
-body { display: block; min-height: 100%; }
 .phone {
 width: 100vw;
-height: 100vh;
-height: 100dvh;
+height: 100svh;
 border-radius: 0;
 box-shadow: none;
-padding-top: env(safe-area-inset-top, 0px);
-padding-bottom: env(safe-area-inset-bottom, 0px);
 }
-.bnav { padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
-.hdr  { padding-top: calc(26px + env(safe-area-inset-top, 0px)); }
+/* Safe area applicata agli screen, non al phone */
+.screen {
+padding-top: env(safe-area-inset-top, 44px) !important;
+padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+}
+.bnav {
+padding-bottom: calc(10px + env(safe-area-inset-bottom, 16px));
+}
 }
 /* Dynamic island */
 
@@ -956,12 +960,14 @@ el.textContent = msg; el.classList.add(‘show’);
 clearTimeout(_tt); _tt = setTimeout(()=>el.classList.remove(‘show’), 2200);
 }
 
+document.addEventListener(‘DOMContentLoaded’, function() {
 document.getElementById(‘bnav-main’).innerHTML = makeNav(‘portfolio’);
 renderTabBody();
 renderMarkets();
 renderDiscover();
 renderSettings();
 initSwap();
+});
 </script>
 
 </body>
