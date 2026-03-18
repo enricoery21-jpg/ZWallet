@@ -18,35 +18,46 @@
   --border:rgba(171,159,242,0.14);--text:#e8e6f8;--muted:#7a78a0;
   --green:#54d890;--red:#ff6b6b;
 }
-body{font-family:'DM Sans',sans-serif;background:var(--bg);display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;}
+/* Force Safari to recognize background colors */
+html { background:#131320; }
+body { background:#131320; -webkit-text-size-adjust:100%; }
+.phone { background:#16213e !important; }
+.screen { background:#16213e !important; }
+.act-icon { background:#ab9ff2 !important; }
+.bnav { background:#16213e !important; }
+body{font-family:'DM Sans',sans-serif;background:#131320;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;}
 
 /* Desktop: frame telefono */
-.phone{width:390px;height:844px;background:var(–card);border-radius:44px;overflow:hidden;
+.phone{width:390px;height:844px;background:#16213e;border-radius:44px;overflow:hidden;
 box-shadow:0 0 0 1.5px rgba(255,255,255,0.10),inset 0 0 0 1px rgba(255,255,255,0.04),0 50px 120px rgba(0,0,0,0.85),0 0 80px rgba(171,159,242,0.07);
 position:relative;}
 
 /* Mobile: full screen, niente frame */
 @media (max-width: 430px) {
-html { height: 100%; }
+html, body {
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+height: 100% !important;
+background: #16213e !important;
+overflow: hidden;
+}
 body {
-display: block;
-margin: 0; padding: 0;
-width: 100%; height: 100%;
-background: var(–card);
+display: block !important;
+min-height: -webkit-fill-available;
 }
 .phone {
-width: 100vw;
-height: 100svh;
-border-radius: 0;
-box-shadow: none;
-}
-/* Safe area applicata agli screen, non al phone */
-.screen {
-padding-top: env(safe-area-inset-top, 44px) !important;
-padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+width: 100% !important;
+height: 100vh !important;
+height: -webkit-fill-available !important;
+border-radius: 0 !important;
+box-shadow: none !important;
 }
 .bnav {
-padding-bottom: calc(10px + env(safe-area-inset-bottom, 16px));
+padding-bottom: calc(12px + env(safe-area-inset-bottom, 20px)) !important;
+}
+.hdr {
+padding-top: max(26px, env(safe-area-inset-top, 26px)) !important;
 }
 }
 /* Dynamic island */
@@ -968,6 +979,20 @@ renderDiscover();
 renderSettings();
 initSwap();
 });
+
+// Fallback per Safari iOS che a volte ignora DOMContentLoaded su file serviti
+if (document.readyState === ‘complete’ || document.readyState === ‘interactive’) {
+setTimeout(function() {
+if (!document.getElementById(‘bnav-main’).innerHTML) {
+document.getElementById(‘bnav-main’).innerHTML = makeNav(‘portfolio’);
+renderTabBody();
+renderMarkets();
+renderDiscover();
+renderSettings();
+initSwap();
+}
+}, 0);
+}
 </script>
 
 </body>
