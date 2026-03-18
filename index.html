@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="apple-touch-icon" href="IMG_5291.png"
+ <link rel="apple-touch-icon" href="IMG_5291.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -306,20 +306,23 @@ var T=[
   {id:'matic',name:'Polygon',sym:'MATIC',bal:'22,000.00',usd:'$17,600.00',pct:'-2.10%',up:false,price:0.80,addr:'0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0'}
 ];
 var C={btc:'#F7931A',eth:'#627EEA',sol:'#9945FF',usdc:'#2775CA',bnb:'#F3BA2F',xrp:'#346AA9',ada:'#0033AD',avax:'#E84142',dot:'#E6007A',link:'#2A5ADA',uni:'#FF007A',matic:'#8247E5'};
+
+// === LOGHI MODIFICATI IN PNG (ufficiali, trasparenti) ===
 var IN={
-  btc:'<path fill="white" d="M29 19.6c.4-2.8-1.7-4.3-4.6-5.3l.9-3.7-2.3-.6-.9 3.6-.6-.1.9-3.6-2.3-.6-.9 3.7-.5-.1-3-.7-.6 2.4s1.7.4 1.6.4c.9.2 1.1.8 1 1.3l-2.4 9.8c-.1.3-.5.8-1.2.6l-1.6-.4-1.1 2.6 2.8.7 1.6.4-1 3.8 2.3.6 1-3.8.6.2-1 3.7 2.3.6 1-3.7c4 .8 7 .4 8.2-3.1.9-2.7 0-4.2-2-5.2 1.5-.3 2.5-1.3 2.8-3.1zm-5 7c-.7 2.7-5.3 1.3-6.8.9l1.2-4.8c1.5.4 6.4 1.1 5.6 3.9zm.7-7.1c-.6 2.4-4.5 1.2-5.7.9l1.1-4.3c1.3.3 5.3.9 4.6 3.4z"/>',
-  eth:'<polygon points="21,8 21,18.6 29.5,22.2" fill="white" opacity="0.9"/><polygon points="21,8 12.5,22.2 21,18.6" fill="white" opacity="0.6"/><polygon points="21,27.8 29.5,23.3 21,18.6" fill="white" opacity="0.9"/><polygon points="12.5,23.3 21,27.8 21,18.6" fill="white" opacity="0.6"/><polygon points="21,29.2 29.5,24.7 21,34" fill="white" opacity="0.9"/><polygon points="12.5,24.7 21,34 21,29.2" fill="white" opacity="0.6"/>',
-  sol:'<defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9945FF"/><stop offset="100%" stop-color="#14F195"/></linearGradient></defs><circle cx="21" cy="21" r="21" fill="url(#sg)"/><path d="M11 27.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.95"/><path d="M11 18.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.85"/><path d="M27.5 9.5H11L13.5 12.5H31l-3.5-3z" fill="white" opacity="0.75"/>',
-  usdc:'<circle cx="21" cy="21" r="12" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/><text x="21" y="25" text-anchor="middle" font-size="9" font-weight="800" fill="white" font-family="Arial">USDC</text>',
-  bnb:'<path fill="white" d="M21 8l3.5 3.5-9.5 9.5-3.5-3.5L21 8zM11 17.5l3.5 3.5-3.5 3.5L7.5 21 11 17.5zM31 17.5L34.5 21 31 24.5 27.5 21 31 17.5zM14.5 21l3.5-3.5 3 3 3-3 3.5 3.5-3.5 3.5-3-3-3 3L14.5 21zM21 27l9.5-9.5 3.5 3.5L21 34l-13-13 3.5-3.5L21 27z"/>',
-  xrp:'<path fill="white" d="M29 13h3.3l-7.1 7a5.8 5.8 0 0 1-8.4 0L9.7 13H13l5.4 5.3a3.3 3.3 0 0 0 4.8-.1L29 13zM13 29H9.7l7.2-7a5.8 5.8 0 0 1 8.4 0l7 7H29l-5.3-5.4a3.3 3.3 0 0 0-4.8 0L13 29z"/>',
-  ada:'<circle cx="21" cy="21" r="3" fill="white"/><circle cx="21" cy="13" r="2" fill="white"/><circle cx="21" cy="29" r="2" fill="white"/><circle cx="29" cy="17" r="2" fill="white"/><circle cx="13" cy="17" r="2" fill="white"/><circle cx="29" cy="25" r="2" fill="white"/><circle cx="13" cy="25" r="2" fill="white"/>',
-  avax:'<path fill="white" d="M25.6 27H29l-8-14-4 7 2.4 4.2 2-3.5L25.6 27zM13 27h3.8l1.2-2.1-1.9-3.3L13 27z"/>',
-  dot:'<circle cx="21" cy="12" r="4" fill="white"/><circle cx="21" cy="30" r="4" fill="white"/><circle cx="12" cy="17" r="3" fill="white" opacity="0.7"/><circle cx="30" cy="17" r="3" fill="white" opacity="0.7"/><circle cx="12" cy="25" r="3" fill="white" opacity="0.7"/><circle cx="30" cy="25" r="3" fill="white" opacity="0.7"/>',
-  link:'<path fill="white" d="M21 9l-2.5 1.5-7.5 4.3v8.4l2.5 1.5V16.4l7.5-4.3 7.5 4.3v8.3L21 29l-5-2.9-2.5 1.5L21 32l10-5.8v-8.4L21 9z"/>',
-  uni:'<text x="21" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="white" font-family="Arial">UNI</text>',
-  matic:'<path fill="white" d="M27 17.5l-2.5-1.5h-7L15 17.5v7l2.5 1.5h7l2.5-1.5v-7zM24.5 23l-1 .5h-5l-1-.5v-5l1-.5h5l1 .5v5z"/>'
+  btc: '<img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  eth: '<img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  sol: '<img src="https://cryptologos.cc/logos/solana-sol-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  usdc: '<img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  bnb: '<img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  xrp: '<img src="https://cryptologos.cc/logos/xrp-xrp-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  ada: '<img src="https://cryptologos.cc/logos/cardano-ada-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  avax: '<img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  dot: '<img src="https://cryptologos.cc/logos/polkadot-dot-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  link: '<img src="https://cryptologos.cc/logos/chainlink-link-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  uni: '<img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  matic: '<img src="https://cryptologos.cc/logos/polygon-matic-logo.png" width="42" height="42" style="border-radius:50%;display:block;">'
 };
+
 var MKT=[
   {id:'btc',name:'Bitcoin',sym:'BTC',price:'$85,503',chg:'+2.14%',up:true,cap:'$1.68T',spark:[40,52,46,60,55,70,63,78,72,85,80,100]},
   {id:'eth',name:'Ethereum',sym:'ETH',price:'$3,165',chg:'+4.31%',up:true,cap:'$380B',spark:[50,44,58,53,68,63,77,72,83,78,90,100]},
@@ -331,11 +334,11 @@ var MKT=[
 var BADGE='<div class="tbadge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div>';
 
 function logo(id,sz){
-  var s=sz||42,c=C[id]||'#555';
-  var bg=(id==='sol')?'':'<circle cx="21" cy="21" r="21" fill="'+c+'"/>';
-  var body=IN[id]||('<text x="21" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="Arial">'+id.substring(0,3).toUpperCase()+'</text>');
-  return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 42 42" style="border-radius:50%;display:block">'+bg+body+'</svg>';
+  var s=sz||42;
+  return IN[id] || `<img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="${s}" height="${s}" style="border-radius:50%;display:block;">`;
 }
+
+// ... (tutto il resto del codice JavaScript rimane IDENTICO all'originale)
 
 var cur='s-home',prev=null,tab='tokens',nav='portfolio';
 var sTok=T[0],rTok=T[2],bTok=T[0],sf=T[0],st=T[2],sPick='from';
