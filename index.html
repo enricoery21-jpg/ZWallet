@@ -62,11 +62,9 @@ box-shadow: none;
 padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 }
 .hdr {
-padding-top: calc(52px + env(safe-area-inset-top, 0px));
+padding-top: calc(58px + env(safe-area-inset-top, 0px));
 }
-.modal-bg {
-border-radius: 0;
-}
+
 }
 /* Dynamic island */
 
@@ -75,18 +73,18 @@ border-radius: 0;
 /* Status bar */
 
 /* SCREENS */
-.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(–card);transition:transform 0.3s cubic-bezier(0.32,0.72,0,1),opacity 0.3s;z-index:1;overflow:hidden;}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:#16213e;transition:transform 0.3s cubic-bezier(0.32,0.72,0,1),opacity 0.3s;z-index:1;overflow:hidden;}
 .screen.hidden{transform:translateX(110%);opacity:0;pointer-events:none;}
 .screen.behind{transform:translateX(-40px);opacity:0;pointer-events:none;}
 
 /* HEADER */
 .hdr{display:flex;justify-content:space-between;align-items:center;padding:26px 20px 10px;flex-shrink:0;}
 .hdr-title{font-size:20px;font-weight:700;color:var(–text);}
-.wallet-pill{display:flex;align-items:center;gap:8px;background:var(–surface);border:1px solid var(–border);border-radius:20px;padding:7px 12px 7px 8px;cursor:pointer;transition:background .2s;}
+.wallet-pill{display:flex;align-items:center;gap:8px;background:#1e2647;border:1px solid rgba(171,159,242,0.14);border-radius:20px;padding:7px 12px 7px 8px;cursor:pointer;transition:background .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .wallet-pill:hover{background:var(–surface2);}
 .w-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ab9ff2,#6c63d5);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;}
 .w-name{font-size:13px;font-weight:600;color:var(–text);}
-.icon-btn{width:36px;height:36px;background:var(–surface);border:1px solid var(–border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(–text);transition:background .2s;flex-shrink:0;}
+.icon-btn{width:36px;height:36px;background:#1e2647;border:1px solid rgba(171,159,242,0.14);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#e8e6f8;transition:background .2s;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .icon-btn:hover{background:var(–purple-glow);}
 .row-btns{display:flex;gap:10px;}
 .back-btn{display:flex;align-items:center;gap:6px;cursor:pointer;color:var(–purple);font-size:14px;font-weight:600;padding:0;background:none;border:none;font-family:‘DM Sans’,sans-serif;}
@@ -100,7 +98,7 @@ border-radius: 0;
 
 /* ACTION BTNs */
 .actions{display:flex;gap:8px;padding:0 16px 26px;flex-shrink:0;}
-.act-btn{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;flex:1;}
+.act-btn{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;flex:1;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .act-icon{width:52px;height:52px;background:var(–purple);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 20px rgba(171,159,242,.35);transition:transform .15s,box-shadow .15s,background .1s;}
 .act-btn:hover .act-icon{transform:translateY(-2px);box-shadow:0 8px 28px rgba(171,159,242,.5);}
 .act-btn:active .act-icon{transform:scale(.92);background:var(–purple-dark);}
@@ -108,7 +106,7 @@ border-radius: 0;
 
 /* TABS */
 .tabs{display:flex;border-bottom:1px solid var(–border);padding:0 20px;flex-shrink:0;}
-.tab{flex:1;text-align:center;padding:10px 0;font-size:13px;font-weight:600;color:var(–muted);cursor:pointer;position:relative;transition:color .2s;user-select:none;}
+.tab{flex:1;text-align:center;padding:10px 0;font-size:13px;font-weight:600;color:#b0aec8;cursor:pointer;position:relative;transition:color .2s;user-select:none;-webkit-tap-highlight-color:transparent;}
 .tab.active{color:var(–purple);}
 .tab.active::after{content:’’;position:absolute;bottom:-1px;left:20%;right:20%;height:2px;background:var(–purple);border-radius:2px;}
 
@@ -117,7 +115,7 @@ border-radius: 0;
 .scroll::-webkit-scrollbar{width:0;}
 
 /* TOKEN LIST */
-.tok-item{display:flex;align-items:center;padding:12px 20px;gap:13px;cursor:pointer;transition:background .15s;border-radius:12px;margin:1px 8px;}
+.tok-item{display:flex;align-items:center;padding:12px 20px;gap:13px;cursor:pointer;transition:background .15s;border-radius:12px;margin:1px 8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .tok-item:hover{background:var(–surface);}
 .tok-item:active{background:var(–surface2);}
 .tok-ico{width:42px;height:42px;border-radius:50%;flex-shrink:0;position:relative;overflow:visible;}
@@ -134,33 +132,33 @@ border-radius: 0;
 
 /* BOTTOM NAV */
 .bnav{display:flex;padding:12px 4px 28px;border-top:1px solid var(–border);flex-shrink:0;background:var(–card);}
-.nav-it{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:4px 2px;border-radius:10px;transition:background .15s;}
+.nav-it{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:4px 2px;border-radius:10px;transition:background .15s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .nav-it:hover{background:var(–purple-glow);}
 .nav-ico{color:var(–muted);transition:color .2s;line-height:0;}
 .nav-lbl{font-size:10px;font-weight:600;color:var(–muted);}
 .nav-it.active .nav-ico,.nav-it.active .nav-lbl{color:var(–purple);}
 
 /* MODAL */
-.modal-bg{position:absolute;inset:0;z-index:50;background:rgba(8,10,28,.75);backdrop-filter:blur(5px);display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .25s;border-radius:40px;overflow:hidden;}
-.modal-bg.open{opacity:1;pointer-events:all;}
-.modal{width:100%;background:#18244e;border-radius:28px 28px 0 0;border:1px solid var(–border);border-bottom:none;padding:0 0 32px;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1);}
+.modal-bg{position:fixed;inset:0;z-index:50;background:rgba(8,10,28,.82);display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .25s;}
+.modal-bg.open{opacity:1;pointer-events:auto;-webkit-tap-highlight-color:transparent;}
+.modal{width:100%;background:#18244e;border-radius:28px 28px 0 0;border:1px solid rgba(171,159,242,0.14);border-bottom:none;padding:0 0 32px;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1);position:relative;z-index:51;}
 .modal-bg.open .modal{transform:translateY(0);}
 .modal-handle{width:36px;height:4px;background:rgba(171,159,242,.3);border-radius:4px;margin:14px auto 0;}
 .modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:16px 22px 4px;}
 .modal-title{font-size:17px;font-weight:700;color:var(–text);}
-.modal-close{width:30px;height:30px;border-radius:50%;background:var(–surface);border:1px solid var(–border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(–muted);transition:background .2s;}
+.modal-close{width:30px;height:30px;border-radius:50%;background:#1e2647;border:1px solid rgba(171,159,242,0.14);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#7a78a0;transition:background .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .modal-close:hover{background:var(–purple-glow);color:var(–text);}
 .modal-body{padding:14px 22px 0;}
 .inp-grp{margin-bottom:14px;}
 .inp-lbl{font-size:11px;font-weight:600;color:var(–muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
-.inp{width:100%;background:var(–surface);border:1px solid var(–border);border-radius:13px;padding:12px 15px;font-size:15px;font-weight:500;color:var(–text);font-family:‘DM Sans’,sans-serif;outline:none;transition:border-color .2s;}
+.inp{width:100%;background:#1e2647;border:1px solid rgba(171,159,242,0.14);border-radius:13px;padding:12px 15px;font-size:16px;font-weight:500;color:#e8e6f8;font-family:‘DM Sans’,sans-serif;outline:none;transition:border-color .2s;-webkit-appearance:none;}
 .inp:focus{border-color:var(–purple);}
 .inp::placeholder{color:var(–muted);}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
-.chip{display:flex;align-items:center;gap:6px;background:var(–surface);border:1px solid var(–border);border-radius:20px;padding:6px 12px 6px 7px;cursor:pointer;font-size:13px;font-weight:600;color:var(–text);transition:border-color .2s,background .2s;}
+.chip{display:flex;align-items:center;gap:6px;background:#1e2647;border:1px solid rgba(171,159,242,0.14);border-radius:20px;padding:6px 12px 6px 7px;cursor:pointer;font-size:13px;font-weight:600;color:#e8e6f8;transition:border-color .2s,background .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .chip:hover,.chip.sel{border-color:var(–purple);background:var(–purple-glow);}
 .chip-dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;}
-.btn-p{width:100%;padding:15px;background:#ab9ff2;border:none;border-radius:13px;color:#fff;font-size:15px;font-weight:700;font-family:‘DM Sans’,sans-serif;cursor:pointer;box-shadow:0 4px 20px rgba(171,159,242,.3);margin-top:4px;-webkit-appearance:none;}
+.btn-p{width:100%;padding:15px;background:#ab9ff2;border:none;border-radius:13px;color:#fff;font-size:15px;font-weight:700;font-family:‘DM Sans’,sans-serif;cursor:pointer;box-shadow:0 4px 20px rgba(171,159,242,.3);margin-top:4px;-webkit-appearance:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .btn-p:hover{background:#8b7cf0;}
 .btn-p:active{transform:scale(.98);}
 
@@ -226,7 +224,7 @@ border-radius: 0;
 .swap-box-lbl{font-size:11px;color:var(–muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
 .swap-token-row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
 .swap-token-pick{display:flex;align-items:center;gap:8px;background:var(–surface2);border:1px solid var(–border);border-radius:20px;padding:6px 12px 6px 8px;cursor:pointer;font-size:14px;font-weight:700;color:var(–text);flex-shrink:0;}
-.swap-amt-input{font-size:28px;font-weight:700;color:var(–text);text-align:right;flex:1;background:none;border:none;outline:none;font-family:‘DM Sans’,sans-serif;min-width:0;}
+.swap-amt-input{font-size:28px;font-weight:700;color:#e8e6f8;text-align:right;flex:1;background:none;border:none;outline:none;font-family:‘DM Sans’,sans-serif;min-width:0;-webkit-appearance:none;}
 .swap-amt-input::placeholder{color:var(–muted);}
 .swap-usd{font-size:12px;color:var(–muted);margin-top:6px;text-align:right;}
 .swap-arrow-row{display:flex;justify-content:center;align-items:center;height:32px;}
@@ -257,6 +255,7 @@ pointer-events:none;
 .swap-cta:not(:disabled):hover{box-shadow:0 8px 32px rgba(171,159,242,.55);transform:translateY(-1px);}
 .swap-cta:not(:disabled):active{transform:scale(.98);}
 .swap-cta:disabled{opacity:.38;cursor:not-allowed;box-shadow:none;}
+.swap-cta{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .toast{position:absolute;bottom:108px;left:50%;transform:translateX(-50%) translateY(10px);background:#232f60;border:1px solid var(–border);border-radius:12px;padding:10px 20px;font-size:13px;font-weight:600;color:var(–text);white-space:nowrap;z-index:200;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
@@ -264,11 +263,34 @@ pointer-events:none;
 .empty{padding:48px 20px;text-align:center;}
 .empty-t{font-size:15px;font-weight:600;color:var(–text);margin-bottom:6px;}
 .empty-s{font-size:13px;line-height:1.5;color:var(–muted);}
+/* PULL TO REFRESH */
+#ptr-indicator{
+position:fixed;top:0;left:50%;transform:translateX(-50%) translateY(-44px);
+display:flex;align-items:center;gap:8px;
+background:#1e2647;border:1px solid rgba(171,159,242,0.2);
+border-radius:20px;padding:8px 16px;
+opacity:0;z-index:9999;pointer-events:none;
+}
+.ptr-icon{color:#7a78a0;display:flex;align-items:center;transition:color .2s;}
+.ptr-text{font-size:12px;font-weight:600;color:#7a78a0;font-family:‘DM Sans’,sans-serif;white-space:nowrap;}
+@keyframes ptr-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 </style>
 
 </head>
 <body>
 <div class="phone" id="app">
+
+<!-- PULL TO REFRESH -->
+
+<div id="ptr-indicator">
+  <div class="ptr-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
+      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+    </svg>
+  </div>
+  <span class="ptr-text">Scorri per aggiornare</span>
+</div>
 
 <!-- ══ NAV SVGs (reused) ══ -->
 
@@ -295,8 +317,8 @@ pointer-events:none;
     </div>
     <div class="row-btns">
       <div class="icon-btn" onclick="showToast('Search')"><svg width="15" height="15"><use href="#ico-search"/></svg></div>
-      <div class="icon-btn" onclick="location.reload()" title="Ricarica">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="icon-btn" onclick="location.reload()" style="touch-action:manipulation">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e8e6f8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
           <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
         </svg>
@@ -578,463 +600,403 @@ pointer-events:none;
 
 </div><!-- /phone -->
 <script>
-// ── DATA ──
-const TOKENS = [
-  {id:'btc', name:'Bitcoin',  sym:'BTC',  bal:'5.8200',   usd:'$497,831.00', pct:'+2.14%', up:true,  price:85503,  addr:'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh'},
-  {id:'eth', name:'Ethereum', sym:'ETH',  bal:'62.4000',  usd:'$197,534.40', pct:'+4.31%', up:true,  price:3165,   addr:'0x71C7656EC7ab88b098defB751B7401B5f6d8976F'},
-  {id:'sol', name:'Solana',   sym:'SOL',  bal:'1,240.00', usd:'$112,947.60', pct:'+6.88%', up:true,  price:91.09,  addr:'7xKp9N3mR2vQwE8cLfBdTjYo4sAhUiMnPzXgDqWkVe1'},
-  {id:'usdc',name:'USD Coin', sym:'USDC', bal:'38,980.12',usd:'$38,980.12',  pct:'−0.01%', up:false, price:1.00,   addr:'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'},
+var TOKENS=[
+  {id:'btc',name:'Bitcoin',sym:'BTC',bal:'5.8200',usd:'$497,831.00',pct:'+2.14%',up:true,price:85503,addr:'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh'},
+  {id:'eth',name:'Ethereum',sym:'ETH',bal:'62.4000',usd:'$197,534.40',pct:'+4.31%',up:true,price:3165,addr:'0x71C7656EC7ab88b098defB751B7401B5f6d8976F'},
+  {id:'sol',name:'Solana',sym:'SOL',bal:'1,240.00',usd:'$112,947.60',pct:'+6.88%',up:true,price:91.09,addr:'7xKp9N3mR2vQwE8cLfBdTjYo4sAhUiMnPzXgDqWkVe1'},
+  {id:'usdc',name:'USD Coin',sym:'USDC',bal:'38,980.12',usd:'$38,980.12',pct:'-0.01%',up:false,price:1.00,addr:'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'}
 ];
-const CLRS = {btc:'#F7931A',eth:'#627EEA',sol:'#9945FF',usdc:'#2775CA'};
-const LOGOS = {
-  btc:`<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#F7931A"/><path fill="white" d="M29 19.6c.4-2.8-1.7-4.3-4.6-5.3l.9-3.7-2.3-.6-.9 3.6-.6-.1.9-3.6-2.3-.6-.9 3.7-.5-.1-3-.7-.6 2.4s1.7.4 1.6.4c.9.2 1.1.8 1 1.3l-2.4 9.8c-.1.3-.5.8-1.2.6l-1.6-.4-1.1 2.6 2.8.7 1.6.4-1 3.8 2.3.6 1-3.8.6.2-1 3.7 2.3.6 1-3.7c4 .8 7 .4 8.2-3.1.9-2.7 0-4.2-2-5.2 1.5-.3 2.5-1.3 2.8-3.1zm-5 7c-.7 2.7-5.3 1.3-6.8.9l1.2-4.8c1.5.4 6.4 1.1 5.6 3.9zm.7-7.1c-.6 2.4-4.5 1.2-5.7.9l1.1-4.3c1.3.3 5.3.9 4.6 3.4z"/></svg>`,
-  eth:`<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#627EEA"/><polygon points="21,8 21,18.6 29.5,22.2" fill="white" opacity="0.9"/><polygon points="21,8 12.5,22.2 21,18.6" fill="white" opacity="0.6"/><polygon points="21,27.8 29.5,23.3 21,18.6" fill="white" opacity="0.9"/><polygon points="12.5,23.3 21,27.8 21,18.6" fill="white" opacity="0.6"/><polygon points="21,29.2 29.5,24.7 21,34" fill="white" opacity="0.9"/><polygon points="12.5,24.7 21,34 21,29.2" fill="white" opacity="0.6"/></svg>`,
-  sol:`<svg class="logo" viewBox="0 0 42 42"><defs><linearGradient id="sG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9945FF"/><stop offset="100%" stop-color="#14F195"/></linearGradient></defs><circle cx="21" cy="21" r="21" fill="url(#sG)"/><path d="M11 27.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.95"/><path d="M11 18.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.85"/><path d="M27.5 9.5H11L13.5 12.5H31l-3.5-3z" fill="white" opacity="0.75"/></svg>`,
-  usdc:`<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#2775CA"/><circle cx="21" cy="21" r="13.5" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/><path fill="white" d="M21 10.5c5.8 0 10.5 4.7 10.5 10.5S26.8 31.5 21 31.5 10.5 26.8 10.5 21 15.2 10.5 21 10.5zm0 1.5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm.8 4.5v1.3c1.8.3 3 1.3 3 2.8h-1.6c0-.8-.5-1.3-1.2-1.3-.7 0-1.1.4-1.1 1 0 .5.4.9 1.4 1.2 1.8.5 2.9 1.3 2.9 2.9 0 1.5-1.1 2.5-3.2 2.8V29h-1.6v-1.3c-2-.3-3.2-1.4-3.2-3h1.7c0 .9.6 1.4 1.5 1.4.8 0 1.3-.4 1.3-1.1 0-.6-.4-1-1.5-1.3-1.8-.5-2.8-1.3-2.8-2.8 0-1.4 1-2.4 3-2.7V16.5h1.6z"/></svg>`,
+var CLRS={btc:'#F7931A',eth:'#627EEA',sol:'#9945FF',usdc:'#2775CA'};
+var LOGOS={
+  btc:'<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#F7931A"/><path fill="white" d="M29 19.6c.4-2.8-1.7-4.3-4.6-5.3l.9-3.7-2.3-.6-.9 3.6-.6-.1.9-3.6-2.3-.6-.9 3.7-.5-.1-3-.7-.6 2.4s1.7.4 1.6.4c.9.2 1.1.8 1 1.3l-2.4 9.8c-.1.3-.5.8-1.2.6l-1.6-.4-1.1 2.6 2.8.7 1.6.4-1 3.8 2.3.6 1-3.8.6.2-1 3.7 2.3.6 1-3.7c4 .8 7 .4 8.2-3.1.9-2.7 0-4.2-2-5.2 1.5-.3 2.5-1.3 2.8-3.1zm-5 7c-.7 2.7-5.3 1.3-6.8.9l1.2-4.8c1.5.4 6.4 1.1 5.6 3.9zm.7-7.1c-.6 2.4-4.5 1.2-5.7.9l1.1-4.3c1.3.3 5.3.9 4.6 3.4z"/></svg>',
+  eth:'<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#627EEA"/><polygon points="21,8 21,18.6 29.5,22.2" fill="white" opacity="0.9"/><polygon points="21,8 12.5,22.2 21,18.6" fill="white" opacity="0.6"/><polygon points="21,27.8 29.5,23.3 21,18.6" fill="white" opacity="0.9"/><polygon points="12.5,23.3 21,27.8 21,18.6" fill="white" opacity="0.6"/><polygon points="21,29.2 29.5,24.7 21,34" fill="white" opacity="0.9"/><polygon points="12.5,24.7 21,34 21,29.2" fill="white" opacity="0.6"/></svg>',
+  sol:'<svg class="logo" viewBox="0 0 42 42"><defs><linearGradient id="sG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9945FF"/><stop offset="100%" stop-color="#14F195"/></linearGradient></defs><circle cx="21" cy="21" r="21" fill="url(#sG)"/><path d="M11 27.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.95"/><path d="M11 18.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.85"/><path d="M27.5 9.5H11L13.5 12.5H31l-3.5-3z" fill="white" opacity="0.75"/></svg>',
+  usdc:'<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#2775CA"/><circle cx="21" cy="21" r="13.5" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/><path fill="white" d="M21 10.5c5.8 0 10.5 4.7 10.5 10.5S26.8 31.5 21 31.5 10.5 26.8 10.5 21 15.2 10.5 21 10.5zm0 1.5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm.8 4.5v1.3c1.8.3 3 1.3 3 2.8h-1.6c0-.8-.5-1.3-1.2-1.3-.7 0-1.1.4-1.1 1 0 .5.4.9 1.4 1.2 1.8.5 2.9 1.3 2.9 2.9 0 1.5-1.1 2.5-3.2 2.8V29h-1.6v-1.3c-2-.3-3.2-1.4-3.2-3h1.7c0 .9.6 1.4 1.5 1.4.8 0 1.3-.4 1.3-1.1 0-.6-.4-1-1.5-1.3-1.8-.5-2.8-1.3-2.8-2.8 0-1.4 1-2.4 3-2.7V16.5h1.6z"/></svg>'
 };
-const BADGE = `<div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div>`;
-const MKTDATA = [
+var BADGE='<div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div>';
+var MKTDATA=[
   {id:'btc',name:'Bitcoin',sym:'BTC',price:'$85,503',chg:'+2.14%',up:true,cap:'$1.68T',spark:[40,52,46,60,55,70,63,78,72,85,80,100]},
   {id:'eth',name:'Ethereum',sym:'ETH',price:'$3,165',chg:'+4.31%',up:true,cap:'$380B',spark:[50,44,58,53,68,63,77,72,83,78,90,100]},
   {id:'sol',name:'Solana',sym:'SOL',price:'$91.09',chg:'+6.88%',up:true,cap:'$41B',spark:[28,42,38,56,52,72,67,78,83,86,92,100]},
-  {id:'usdc',name:'USD Coin',sym:'USDC',price:'$1.00',chg:'−0.01%',up:false,cap:'$44B',spark:[100,100,99,100,100,100,99,100,100,99,100,100]},
+  {id:'usdc',name:'USD Coin',sym:'USDC',price:'$1.00',chg:'-0.01%',up:false,cap:'$44B',spark:[100,100,99,100,100,100,99,100,100,99,100,100]},
   {id:'bnb',name:'BNB',sym:'BNB',price:'$612',chg:'+1.22%',up:true,cap:'$89B',spark:[60,63,60,68,65,71,69,75,73,79,82,88]},
-  {id:'xrp',name:'XRP',sym:'XRP',price:'$0.58',chg:'−1.40%',up:false,cap:'$31B',spark:[100,96,92,89,85,81,79,75,73,70,68,65]},
+  {id:'xrp',name:'XRP',sym:'XRP',price:'$0.58',chg:'-1.40%',up:false,cap:'$31B',spark:[100,96,92,89,85,81,79,75,73,70,68,65]}
 ];
+var activeScreen='s-portfolio',prevScreen=null,activeTab='tokens',activeNav='portfolio';
+var sendToken=TOKENS[0],recvToken=TOKENS[2],buyToken=TOKENS[0],swapFrom=TOKENS[0],swapTo=TOKENS[2],swapPickerTarget='from';
+var _rendered={};
+var NAV_SCREENS={portfolio:'s-portfolio',swap:'s-swap',discover:'s-discover',markets:'s-markets',settings:'s-settings'};
 
-// ── STATE ──
-let activeScreen = ‘s-portfolio’;
-let prevScreen = null;
-let activeTab = ‘tokens’;
-let activeNav = ‘portfolio’;
-let sendToken = TOKENS[0];
-let recvToken = TOKENS[2];
-let buyToken  = TOKENS[0];
+function navTo(key){
+if(key===‘swap’){pushScreen(‘s-swap’);activeNav=‘swap’;_upNav();return;}
+var id=NAV_SCREENS[key];
+if(!id||activeScreen===id)return;
+if(!_rendered[key]){_rendered[key]=true;
+if(key===‘markets’)renderMarkets();
+if(key===‘discover’)renderDiscover();
+if(key===‘settings’)renderSettings();}
+var c=document.getElementById(activeScreen),n=document.getElementById(id);
+c.classList.add(‘hidden’);n.classList.remove(‘hidden’,‘behind’);
+n.style.zIndex=‘5’;c.style.zIndex=‘1’;
+activeScreen=id;prevScreen=null;activeNav=key;_upNav();}
 
-// ── SCREEN NAV ──
-const NAV_SCREENS = {portfolio:‘s-portfolio’,swap:‘s-swap’,discover:‘s-discover’,markets:‘s-markets’,settings:‘s-settings’};
+function pushScreen(id){
+var c=document.getElementById(activeScreen),n=document.getElementById(id);
+c.classList.add(‘behind’);n.classList.remove(‘hidden’,‘behind’);
+n.style.zIndex=‘10’;prevScreen=activeScreen;activeScreen=id;}
 
-const _rendered = {};
-function navTo(key) {
-if (key === ‘swap’) { pushScreen(‘s-swap’); activeNav = ‘swap’; updateNavHighlight(); return; }
-const targetId = NAV_SCREENS[key];
-if (!targetId || activeScreen === targetId) return;
-// Lazy render on first visit
-if (!_rendered[key]) {
-_rendered[key] = true;
-if (key === ‘markets’)  renderMarkets();
-if (key === ‘discover’) renderDiscover();
-if (key === ‘settings’) renderSettings();
-}
-const cur = document.getElementById(activeScreen);
-const next = document.getElementById(targetId);
-cur.classList.add(‘hidden’);
-next.classList.remove(‘hidden’,‘behind’);
-next.style.zIndex = 5;
-cur.style.zIndex = 1;
-activeScreen = targetId;
-prevScreen = null;
-activeNav = key;
-updateNavHighlight();
-}
+function goBack(){
+var bt=prevScreen||‘s-portfolio’;
+var c=document.getElementById(activeScreen),p=document.getElementById(bt);
+c.classList.add(‘hidden’);c.style.zIndex=‘1’;
+p.classList.remove(‘behind’,‘hidden’);p.style.zIndex=‘5’;
+activeScreen=bt;prevScreen=null;
+var ks=Object.keys(NAV_SCREENS);
+for(var k=0;k<ks.length;k++){if(NAV_SCREENS[ks[k]]===bt){activeNav=ks[k];break;}}
+_upNav();}
 
-function pushScreen(id) {
-const cur = document.getElementById(activeScreen);
-const next = document.getElementById(id);
-cur.classList.add(‘behind’);
-next.classList.remove(‘hidden’,‘behind’);
-next.style.zIndex = 10;
-prevScreen = activeScreen;
-activeScreen = id;
-}
+function _upNav(){
+var its=document.querySelectorAll(’.nav-it’);
+for(var i=0;i<its.length;i++)its[i].classList.toggle(‘active’,its[i].getAttribute(‘data-nav’)===activeNav);}
 
-function goBack() {
-// Always fall back to portfolio if prevScreen is null
-const backTo = prevScreen || ‘s-portfolio’;
-const cur  = document.getElementById(activeScreen);
-const prev = document.getElementById(backTo);
-cur.classList.add(‘hidden’);
-cur.style.zIndex = 1;
-prev.classList.remove(‘behind’,‘hidden’);
-prev.style.zIndex = 5;
-activeScreen = backTo;
-prevScreen = null;
-// re-sync nav highlight
-const navKey = Object.keys(NAV_SCREENS).find(k => NAV_SCREENS[k] === backTo) || ‘portfolio’;
-activeNav = navKey;
-updateNavHighlight();
-}
+function makeNav(ak){
+var ns=[{key:‘portfolio’,ico:‘ico-portfolio’,lbl:‘Portfolio’},{key:‘swap’,ico:‘ico-swap’,lbl:‘Swap’},
+{key:‘discover’,ico:‘ico-discover’,lbl:‘Discover’},{key:‘markets’,ico:‘ico-markets’,lbl:‘Markets’},
+{key:‘settings’,ico:‘ico-settings’,lbl:‘Settings’}];
+var h=’’;
+for(var i=0;i<ns.length;i++){var n=ns[i];
+h+=’<div class="nav-it'+(n.key===ak?' active':'')+'" data-nav="'+n.key+'" onclick="navTo(''+n.key+'')">’;
+h+=’<div class="nav-ico"><svg width="22" height="22"><use href="#'+n.ico+'"/></svg></div>’;
+h+=’<div class="nav-lbl">’+n.lbl+’</div></div>’;}
+return h;}
 
-function updateNavHighlight() {
-// Update all nav bars
-document.querySelectorAll(’.nav-it’).forEach(el => {
-el.classList.toggle(‘active’, el.dataset.nav === activeNav);
-});
-}
+function switchTab(tab){
+activeTab=tab;
+var ts=[‘tokens’,‘nfts’,‘activity’];
+for(var i=0;i<ts.length;i++){var e=document.getElementById(‘tab-’+ts[i]);if(e)e.classList.toggle(‘active’,ts[i]===tab);}
+renderTabBody();}
 
-function makeNav(activeKey) {
-const items = [
-{key:‘portfolio’, ico:‘ico-portfolio’, lbl:‘Portfolio’},
-{key:‘swap’,      ico:‘ico-swap’,      lbl:‘Swap’},
-{key:‘discover’,  ico:‘ico-discover’,  lbl:‘Discover’},
-{key:‘markets’,   ico:‘ico-markets’,   lbl:‘Markets’},
-{key:‘settings’,  ico:‘ico-settings’,  lbl:‘Settings’},
+function renderTabBody(){
+var el=document.getElementById(‘tab-body’);if(!el)return;
+var h=’’;
+if(activeTab===‘tokens’){
+for(var i=0;i<TOKENS.length;i++){var t=TOKENS[i];
+h+=’<div class="tok-item" onclick="openDetail(''+t.id+'')">’;
+h+=’<div class="tok-ico">’+LOGOS[t.id]+BADGE+’</div>’;
+h+=’<div class="tok-info"><div class="tok-name">’+t.name+’</div><div class="tok-amt">’+t.bal+’ ‘+t.sym+’</div></div>’;
+h+=’<div class="tok-val"><div class="tok-usd">’+t.usd+’</div><div class="tok-pct '+(t.up?'up':'dn')+'">’+t.pct+’</div></div></div>’;
+h+=’<div class="divider"></div>’;}
+}else if(activeTab===‘nfts’){
+h=’<div class="empty" style="padding-top:60px"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto 14px;display:block;opacity:.3"><rect x="6" y="10" width="36" height="30" rx="6" stroke="#7a78a0" stroke-width="2.5"/><path d="M6 28l10-8 8 6 6-5 12 9" stroke="#7a78a0" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="20" r="3" stroke="#7a78a0" stroke-width="2"/></svg><div class="empty-t">No NFTs yet</div><div class="empty-s">Your collection will appear here</div></div>’;
+}else{
+var acts=[
+{dir:‘down’,col:’#54d890’,name:‘Received BTC’,date:‘Mar 17, 2026’,val:’+$85,470’,amt:’+1.0 BTC’},
+{dir:‘up’,col:’#ff6b6b’,name:‘Sent ETH’,date:‘Mar 15, 2026’,val:’-$12,800’,amt:’-4.0 ETH’},
+{dir:‘sw’,col:’#ab9ff2’,name:‘Swapped SOL to USDC’,date:‘Mar 12, 2026’,val:’$9,140’,amt:‘100 SOL’},
+{dir:‘down’,col:’#54d890’,name:‘Received SOL’,date:‘Mar 10, 2026’,val:’+$18,200’,amt:’+200 SOL’}
 ];
-return items.map(i=>`<div class="nav-it${i.key===activeKey?' active':''}" data-nav="${i.key}" onclick="navTo('${i.key}')"> <div class="nav-ico"><svg width="22" height="22"><use href="#${i.ico}"/></svg></div> <div class="nav-lbl">${i.lbl}</div> </div>`).join(’’);
-}
+for(var i=0;i<acts.length;i++){var a=acts[i];
+var ip=a.dir===‘down’?’<path d="M12 5v14M19 12l-7 7-7-7"/>’:a.dir===‘up’?’<path d="M12 19V5M5 12l7-7 7 7"/>’:’<path d="M7 16l-4-4 4-4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/>’;
+var vc=a.dir===‘down’?’#54d890’:a.dir===‘up’?’#ff6b6b’:’#e8e6f8’;
+h+=’<div class="tok-item" onclick="showToast('Transaction details')">’;
+h+=’<div class="tok-ico" style="background:'+a.col+'22;display:flex;align-items:center;justify-content:center;">’;
+h+=’<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="'+a.col+'" stroke-width="2.5" stroke-linecap="round">’+ip+’</svg></div>’;
+h+=’<div class="tok-info"><div class="tok-name">’+a.name+’</div><div class="tok-amt">’+a.date+’ - Confirmed</div></div>’;
+h+=’<div class="tok-val"><div class="tok-usd" style="color:'+vc+'">’+a.val+’</div><div class="tok-pct">’+a.amt+’</div></div></div>’;
+h+=’<div class="divider"></div>’;}}
+el.innerHTML=h;}
 
-// ── TABS ──
-function switchTab(tab) {
-activeTab = tab;
-[‘tokens’,‘nfts’,‘activity’].forEach(t => document.getElementById(‘tab-’+t).classList.toggle(‘active’, t===tab));
-renderTabBody();
-}
+function openDetail(id){
+var t=null;for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){t=TOKENS[i];break;}}
+if(!t)return;
+var pc=t.up?’#54d890’:’#ff6b6b’,pts=makeChart(t.up),h=’’;
+h+=’<div style="padding:0 20px 10px;display:flex;align-items:center;gap:12px;">’;
+h+=’<div class="tok-ico" style="width:48px;height:48px">’+LOGOS[t.id].replace(‘class=“logo”’,‘width=“48” height=“48” style=“border-radius:50%”’)+’</div>’;
+h+=’<div><div style="font-size:20px;font-weight:700;color:#e8e6f8">’+t.name+’</div>’;
+h+=’<div style="font-size:13px;color:#7a78a0">’+t.sym+’</div></div></div>’;
+h+=’<div style="padding:0 20px 6px"><div class="det-big">$’+t.price.toLocaleString()+’</div>’;
+h+=’<div class="det-chg" style="color:'+pc+'">’+t.pct+’ today</div></div>’;
+h+=’<div style="padding:10px 20px 4px"><div style="display:flex;gap:2px;margin-bottom:10px">’;
+var ps=[‘1H’,‘1D’,‘1W’,‘1M’,‘1Y’,‘All’];
+for(var p=0;p<ps.length;p++)h+=’<button class="per-btn'+(p===1?' active':'')+'" onclick="changePeriod(this,''+t.id+'')">’+ps[p]+’</button>’;
+h+=’</div>’;
+h+=’<svg viewBox="0 0 330 90" width="100%" height="90" id="det-chart">’;
+h+=’<defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="'+(t.up?'#54d890':'#ff6b6b')+'" stop-opacity="0.22"/><stop offset="100%" stop-color="'+(t.up?'#54d890':'#ff6b6b')+'" stop-opacity="0"/></linearGradient></defs>’;
+h+=’<path id="det-area" d="'+pts.area+'" fill="url(#cg)"/>’;
+h+=’<path id="det-line" d="'+pts.line+'" fill="none" stroke="'+(t.up?'#54d890':'#ff6b6b')+'" stroke-width="2" stroke-linecap="round"/>’;
+h+=’</svg></div>’;
+h+=’<div class="stats-grid">’;
+h+=’<div class="stat-card"><div class="stat-lbl">Balance</div><div class="stat-val">’+t.bal+’ ‘+t.sym+’</div></div>’;
+h+=’<div class="stat-card"><div class="stat-lbl">Value</div><div class="stat-val">’+t.usd+’</div></div>’;
+h+=’<div class="stat-card"><div class="stat-lbl">24h Change</div><div class="stat-val" style="color:'+pc+'">’+t.pct+’</div></div>’;
+h+=’<div class="stat-card"><div class="stat-lbl">Price</div><div class="stat-val">$’+t.price.toLocaleString()+’</div></div></div>’;
+h+=’<div style="display:flex;gap:8px;padding:0 20px 28px">’;
+h+=’<button class="btn-p" style="flex:1" onclick="goBack();openModal('send')">Send</button>’;
+h+=’<button class="btn-p" style="flex:1;background:#1e2647;color:#ab9ff2;box-shadow:none;border:1px solid rgba(171,159,242,0.14)" onclick="goBack();openModal('receive')">Receive</button>’;
+h+=’</div>’;
+document.getElementById(‘detail-body’).innerHTML=h;
+pushScreen(‘s-detail’);}
 
-function renderTabBody() {
-const el = document.getElementById(‘tab-body’);
-if (activeTab === ‘tokens’) {
-el.innerHTML = TOKENS.map(t=>`<div class="tok-item" onclick="openDetail('${t.id}')"> <div class="tok-ico">${LOGOS[t.id]}${BADGE}</div> <div class="tok-info"><div class="tok-name">${t.name}</div><div class="tok-amt">${t.bal} ${t.sym}</div></div> <div class="tok-val"><div class="tok-usd">${t.usd}</div><div class="tok-pct ${t.up?'up':'dn'}">${t.pct}</div></div> </div><div class="divider"></div>`).join(’’);
-} else if (activeTab === ‘nfts’) {
-el.innerHTML = `<div class="empty" style="padding-top:60px"> <svg width="52" height="52" viewBox="0 0 48 48" fill="none" style="margin:0 auto 14px;display:block;opacity:.3"><rect x="6" y="10" width="36" height="30" rx="6" stroke="var(--muted)" stroke-width="2.5"/><path d="M6 28l10-8 8 6 6-5 12 9" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="20" r="3" stroke="var(--muted)" stroke-width="2"/></svg> <div class="empty-t">No NFTs yet</div><div class="empty-s">Your NFT collection will appear here</div></div>`;
-} else {
-const acts = [
-{dir:‘down’,col:’#54d890’,name:‘Received BTC’,  date:‘Mar 17, 2026’, val:’+$85,470’, amt:’+1.0 BTC’},
-{dir:‘up’,  col:’#ff6b6b’,name:‘Sent ETH’,      date:‘Mar 15, 2026’, val:‘−$12,800’, amt:‘−4.0 ETH’},
-{dir:‘sw’,  col:’#ab9ff2’,name:‘Swapped SOL → USDC’,date:‘Mar 12, 2026’,val:’$9,140’,amt:‘100 SOL’},
-{dir:‘down’,col:’#54d890’,name:‘Received SOL’,  date:‘Mar 10, 2026’, val:’+$18,200’, amt:’+200 SOL’},
-];
-const icons = {
-down:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>`,
-up:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>`,
-sw:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/></svg>`,
-};
-el.innerHTML = acts.map(a=>`<div class="tok-item" onclick="showToast('Transaction details')"> <div class="tok-ico" style="background:${a.col}22;display:flex;align-items:center;justify-content:center;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${a.col}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"> ${a.dir==='down'?'<path d="M12 5v14M19 12l-7 7-7-7"/>':a.dir==='up'?'<path d="M12 19V5M5 12l7-7 7 7"/>':'<path d="M7 16l-4-4 4-4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/>'} </svg> </div> <div class="tok-info"><div class="tok-name">${a.name}</div><div class="tok-amt">${a.date} · Confirmed</div></div> <div class="tok-val"><div class="tok-usd" style="color:${a.dir==='down'?'var(--green)':a.dir==='up'?'var(--red)':'var(--text)'}">${a.val}</div><div class="tok-pct">${a.amt}</div></div> </div><div class="divider"></div>`).join(’’);
-}
-}
-
-// ── DETAIL ──
-function openDetail(id) {
-const t = TOKENS.find(x=>x.id===id);
-const pctColor = t.up ? ‘var(–green)’ : ‘var(–red)’;
-const pts = makeChart(t.up);
-document.getElementById(‘detail-body’).innerHTML = ` <div style="padding:0 20px 10px;display:flex;align-items:center;gap:12px;"> <div class="tok-ico" style="width:48px;height:48px">${LOGOS[t.id].replace('class="logo"','width="48" height="48" style="border-radius:50%"')}</div> <div><div style="font-size:20px;font-weight:700;color:var(--text)">${t.name}</div> <div style="font-size:13px;color:var(--muted)">${t.sym}</div></div> </div> <div style="padding:0 20px 6px"> <div class="det-big">$${t.price.toLocaleString()}</div> <div class="det-chg" style="color:${pctColor}">${t.pct} today</div> </div> <div style="padding:10px 20px 4px"> <div style="display:flex;gap:2px;margin-bottom:10px"> ${['1H','1D','1W','1M','1Y','All'].map((p,i)=>`<button class="per-btn${i===1?' active':''}" onclick="changePeriod(this,'${t.id}')">${p}</button>`).join('')} </div> <svg viewBox="0 0 330 90" width="100%" height="90" id="det-chart"> <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"> <stop offset="0%" stop-color="${t.up?'#54d890':'#ff6b6b'}" stop-opacity="0.22"/> <stop offset="100%" stop-color="${t.up?'#54d890':'#ff6b6b'}" stop-opacity="0"/> </linearGradient></defs> <path id="det-area" d="${pts.area}" fill="url(#cg)"/> <path id="det-line" d="${pts.line}" fill="none" stroke="${t.up?'#54d890':'#ff6b6b'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg> </div> <div class="stats-grid"> <div class="stat-card"><div class="stat-lbl">Balance</div><div class="stat-val">${t.bal} ${t.sym}</div></div> <div class="stat-card"><div class="stat-lbl">Value</div><div class="stat-val">${t.usd}</div></div> <div class="stat-card"><div class="stat-lbl">24h Change</div><div class="stat-val" style="color:${pctColor}">${t.pct}</div></div> <div class="stat-card"><div class="stat-lbl">Price</div><div class="stat-val">$${t.price.toLocaleString()}</div></div> </div> <div style="display:flex;gap:8px;padding:0 20px 28px"> <button class="btn-p" style="flex:1" onclick="goBack();openModal('send')">Send</button> <button class="btn-p" style="flex:1;background:var(--surface);color:var(--purple);box-shadow:none;border:1px solid var(--border)" onclick="goBack();openModal('receive')">Receive</button> </div> `;
-pushScreen(‘s-detail’);
-}
-
-function changePeriod(el, id) {
-el.closest(‘div’).querySelectorAll(’.per-btn’).forEach(b=>b.classList.remove(‘active’));
+function changePeriod(el,id){
+var bs=el.parentNode.querySelectorAll(’.per-btn’);
+for(var i=0;i<bs.length;i++)bs[i].classList.remove(‘active’);
 el.classList.add(‘active’);
-const t = TOKENS.find(x=>x.id===id);
-const pts = makeChart(t.up);
-document.getElementById(‘det-line’).setAttribute(‘d’, pts.line);
-document.getElementById(‘det-area’).setAttribute(‘d’, pts.area);
-}
+var t=null;for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){t=TOKENS[i];break;}}
+var pts=makeChart(t.up);
+document.getElementById(‘det-line’).setAttribute(‘d’,pts.line);
+document.getElementById(‘det-area’).setAttribute(‘d’,pts.area);}
 
-function makeChart(up) {
-let v = up ? 30 : 75;
-const pts = [];
-for (let i=0;i<22;i++){
-v += (Math.random()-0.42) * 5 * (up ? 1 : -1);
-v = Math.max(8, Math.min(88, v));
-pts.push(v);
-}
-const W=330,H=90,P=4;
-const xs = pts.map((_,i) => P + i*(W-P*2)/(pts.length-1));
-const ys = pts.map(p  => H-P - (p/100)*(H-P*2));
-let line = `M${xs[0]},${ys[0]}`;
-for(let i=1;i<xs.length;i++) line += ` C${xs[i-1]+14},${ys[i-1]} ${xs[i]-14},${ys[i]} ${xs[i]},${ys[i]}`;
-return {line, area: line + ` L${xs[xs.length-1]},${H} L${xs[0]},${H} Z`};
-}
+function makeChart(up){
+var v=up?30:75,pts=[];
+for(var i=0;i<22;i++){v+=(Math.random()-0.42)*5*(up?1:-1);if(v<8)v=8;if(v>88)v=88;pts.push(v);}
+var W=330,H=90,P=4,xs=[],ys=[];
+for(var i=0;i<pts.length;i++){xs.push(P+i*(W-P*2)/(pts.length-1));ys.push(H-P-(pts[i]/100)*(H-P*2));}
+var ln=‘M’+xs[0]+’,’+ys[0];
+for(var i=1;i<xs.length;i++)ln+=’ C’+(xs[i-1]+14)+’,’+ys[i-1]+’ ‘+(xs[i]-14)+’,’+ys[i]+’ ‘+xs[i]+’,’+ys[i];
+return{line:ln,area:ln+’ L’+xs[xs.length-1]+’,’+H+’ L’+xs[0]+’,’+H+’ Z’};}
 
-// ── MARKETS ──
-function renderMarkets() {
-document.getElementById(‘markets-body’).innerHTML =
-MKTDATA.map(m=>` <div class="mkt-row" onclick="showToast('${m.name} coming soon')"> <div class="tok-ico">${LOGOS[m.id]||`<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#555"/><text x="21" y="27" text-anchor="middle" font-size="14" font-weight="700" fill="white" font-family="Arial">${m.sym[0]}</text></svg>`}</div> <div class="mkt-info"><div class="mkt-name">${m.name} <span style="color:var(--muted);font-size:12px;font-weight:400">${m.sym}</span></div><div class="mkt-cap">MCap ${m.cap}</div></div> <div class="spark">${m.spark.map(v=>`<div class="spark-bar" style="height:${v*0.27}px;background:${m.up?'var(--green)':'var(--red)'};opacity:${0.4+v*0.006}"></div>`).join('')}</div> <div class="mkt-right"><div style="font-size:14px;font-weight:600;color:var(--text)">${m.price}</div><div style="font-size:12px;font-weight:600;color:${m.up?'var(--green)':'var(--red)'};margin-top:2px">${m.chg}</div></div> </div><div class="divider"></div> `).join(’’);
-document.getElementById(‘bnav-markets’).innerHTML = makeNav(‘markets’);
-}
+function renderMarkets(){
+var h=’’;
+for(var i=0;i<MKTDATA.length;i++){var m=MKTDATA[i];
+var lg=LOGOS[m.id]||(’<svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#555"/><text x="21" y="27" text-anchor="middle" font-size="14" font-weight="700" fill="white">’+m.sym[0]+’</text></svg>’);
+h+=’<div class="mkt-row" onclick="showToast(''+m.name+' coming soon')">’;
+h+=’<div class="tok-ico">’+lg+’</div>’;
+h+=’<div class="mkt-info"><div class="mkt-name">’+m.name+’ <span style="color:#7a78a0;font-size:12px">’+m.sym+’</span></div><div class="mkt-cap">MCap ‘+m.cap+’</div></div>’;
+h+=’<div class="spark">’;
+for(var s=0;s<m.spark.length;s++)h+=’<div class="spark-bar" style="height:'+Math.round(m.spark[s]*0.27)+'px;background:'+(m.up?'#54d890':'#ff6b6b')+';opacity:'+(0.4+m.spark[s]*0.006).toFixed(2)+'"></div>’;
+h+=’</div><div class="mkt-right"><div style="font-size:14px;font-weight:600;color:#e8e6f8">’+m.price+’</div>’;
+h+=’<div style="font-size:12px;font-weight:600;color:'+(m.up?'#54d890':'#ff6b6b')+'">’+m.chg+’</div></div></div><div class="divider"></div>’;}
+var el=document.getElementById(‘markets-body’);if(el)el.innerHTML=h;
+var nb=document.getElementById(‘bnav-markets’);if(nb)nb.innerHTML=makeNav(‘markets’);}
 
-// ── DISCOVER ──
-function renderDiscover() {
-const dapps = [
-{name:‘Jupiter’,    sub:‘DEX Aggregator’,    color:’#C7F284’, color2:’#00BCD4’},
-{name:‘Raydium’,    sub:‘AMM & Liquidity’,   color:’#5AC4BE’, color2:’#3a8f8a’},
-{name:‘Magic Eden’, sub:‘NFT Marketplace’,   color:’#E42575’, color2:’#8b1545’},
-{name:‘Orca’,       sub:‘Concentrated AMM’,  color:’#FBAB5B’, color2:’#d4733a’},
-{name:‘Kamino’,     sub:‘Yield Optimizer’,   color:’#7B61FF’, color2:’#4a38cc’},
-{name:‘Tensor’,     sub:‘NFT Trading’,       color:’#1DB954’, color2:’#127a36’},
-];
-document.getElementById(‘discover-body’).innerHTML = ` <div class="disc-banner" onclick="showToast('Opening Marinade Finance…')"> <div class="disc-tag">Featured</div> <div class="disc-btitle">Earn up to 12% APY on SOL</div> <div class="disc-sub">Stake with Marinade Finance — liquid staking protocol</div> </div> <div style="padding:10px 20px 8px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase">Popular dApps</div> <div class="disc-grid"> ${dapps.map(d=>`
-<div class="disc-card" onclick="showToast('Opening ${d.name}…')">
-<div class="disc-card-icon">
-<svg width="32" height="32" viewBox="0 0 42 42">
-<defs><linearGradient id="dg${d.name.replace(/\s/,'')}" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0%" stop-color="${d.color}"/><stop offset="100%" stop-color="${d.color2}"/>
-</linearGradient></defs>
-<circle cx="21" cy="21" r="21" fill="url(#dg${d.name.replace(/\s/,'')})"/>
-<text x="21" y="27" text-anchor="middle" font-size="16" font-weight="800" fill="white" font-family="Arial">${d.name[0]}</text>
-</svg>
-</div>
-<div class="disc-card-title">${d.name}</div>
-<div class="disc-card-sub">${d.sub}</div>
-</div>
-`).join('')} </div>`;
-document.getElementById(‘bnav-discover’).innerHTML = makeNav(‘discover’);
-}
+function renderDiscover(){
+var ds=[{name:‘Jupiter’,sub:‘DEX Aggregator’,c1:’#C7F284’,c2:’#00BCD4’},{name:‘Raydium’,sub:‘AMM & Liquidity’,c1:’#5AC4BE’,c2:’#3a8f8a’},
+{name:‘Magic Eden’,sub:‘NFT Marketplace’,c1:’#E42575’,c2:’#8b1545’},{name:‘Orca’,sub:‘Concentrated AMM’,c1:’#FBAB5B’,c2:’#d4733a’},
+{name:‘Kamino’,sub:‘Yield Optimizer’,c1:’#7B61FF’,c2:’#4a38cc’},{name:‘Tensor’,sub:‘NFT Trading’,c1:’#1DB954’,c2:’#127a36’}];
+var h=’<div class="disc-banner" onclick="showToast('Opening Marinade Finance...')">’;
+h+=’<div class="disc-tag">Featured</div><div class="disc-btitle">Earn up to 12% APY on SOL</div>’;
+h+=’<div class="disc-sub">Stake with Marinade Finance</div></div>’;
+h+=’<div style="padding:10px 20px 8px;font-size:11px;font-weight:600;color:#7a78a0;letter-spacing:.08em;text-transform:uppercase">Popular dApps</div>’;
+h+=’<div class="disc-grid">’;
+for(var i=0;i<ds.length;i++){var d=ds[i],did=d.name.replace(/\s/g,’’);
+h+=’<div class="disc-card" onclick="showToast('Opening '+d.name+'...')">’;
+h+=’<div class="disc-card-icon"><svg width="32" height="32" viewBox="0 0 42 42">’;
+h+=’<defs><linearGradient id="dg'+did+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="'+d.c1+'"/><stop offset="100%" stop-color="'+d.c2+'"/></linearGradient></defs>’;
+h+=’<circle cx="21" cy="21" r="21" fill="url(#dg'+did+')"/>’;
+h+=’<text x="21" y="27" text-anchor="middle" font-size="16" font-weight="800" fill="white">’+d.name[0]+’</text>’;
+h+=’</svg></div><div class="disc-card-title">’+d.name+’</div><div class="disc-card-sub">’+d.sub+’</div></div>’;}
+h+=’</div>’;
+var el=document.getElementById(‘discover-body’);if(el)el.innerHTML=h;
+var nb=document.getElementById(‘bnav-discover’);if(nb)nb.innerHTML=makeNav(‘discover’);}
 
-// ── SETTINGS ──
-function renderSettings() {
-const sections = [
-{title:‘Wallet’, rows:[
-{ico:’#ab9ff2’,bg:‘rgba(171,159,242,.15)’,path:’<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 22 16z"/>’,lbl:‘Trusted Apps’,   right:‘3 connected’},
-{ico:’#54d890’,bg:‘rgba(84,216,144,.15)’, path:’<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>’,lbl:‘Security & Privacy’,right:’’},
-{ico:’#ff9f43’,bg:‘rgba(255,159,67,.15)’, path:’<circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>’,lbl:‘Manage Wallets’,right:‘1 wallet’},
-]},
-{title:‘Preferences’, rows:[
-{ico:’#627EEA’,bg:‘rgba(98,126,234,.15)’, path:’<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>’,lbl:‘Language’,right:‘English’},
-{ico:’#ff6b6b’,bg:‘rgba(255,107,107,.15)’,path:’<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>’,lbl:‘Currency’,right:‘USD’},
-]},
-{title:‘Notifications’, rows:[
+function renderSettings(){
+var secs=[
+{title:‘Wallet’,rows:[
+{ico:’#ab9ff2’,bg:‘rgba(171,159,242,.15)’,path:’<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 22 16z"/>’,lbl:‘Trusted Apps’,right:‘3 connected’},
+{ico:’#54d890’,bg:‘rgba(84,216,144,.15)’,path:’<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>’,lbl:‘Security & Privacy’,right:’’},
+{ico:’#ff9f43’,bg:‘rgba(255,159,67,.15)’,path:’<circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>’,lbl:‘Manage Wallets’,right:‘1 wallet’}]},
+{title:‘Preferences’,rows:[
+{ico:’#627EEA’,bg:‘rgba(98,126,234,.15)’,path:’<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>’,lbl:‘Language’,right:‘English’},
+{ico:’#ff6b6b’,bg:‘rgba(255,107,107,.15)’,path:’<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>’,lbl:‘Currency’,right:‘USD’}]},
+{title:‘Notifications’,rows:[
 {ico:’#ab9ff2’,bg:‘rgba(171,159,242,.15)’,path:’<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>’,lbl:‘Push Notifications’,toggle:true,on:true},
-{ico:’#54d890’,bg:‘rgba(84,216,144,.15)’, path:’<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>’,lbl:‘Email Updates’,toggle:true,on:false},
-]},
-{title:‘Support’, rows:[
-{ico:’#14F195’,bg:‘rgba(20,241,149,.12)’, path:’<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>’,lbl:‘Help Center’,right:’’},
-{ico:’#ab9ff2’,bg:‘rgba(171,159,242,.15)’,path:’<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>’,lbl:‘Send Feedback’,right:’’},
-]},
-];
-document.getElementById(‘settings-body’).innerHTML = sections.map(s=>` <div class="set-section"><div class="set-section-lbl">${s.title}</div></div> ${s.rows.map(r=>`
-<div class="set-row" onclick="showToast('${r.lbl}')">
-<div class="set-left">
-<div class="set-icon" style="background:${r.bg}">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${r.ico}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${r.path}</svg>
-</div>
-<div class="set-lbl">${r.lbl}</div>
-</div>
-<div class="set-right">
-${r.toggle
-? `<div class="toggle${r.on?'':' off'}" onclick="event.stopPropagation();this.classList.toggle('off')"></div>`
-: `${r.right?`<span>${r.right}</span>`:''} <svg width="14" height="14"><use href="#ico-chevright"/></svg>`}
-</div>
-</div>
-`).join('')} `).join(’’);
-document.getElementById(‘bnav-settings’).innerHTML = makeNav(‘settings’);
-}
+{ico:’#54d890’,bg:‘rgba(84,216,144,.15)’,path:’<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>’,lbl:‘Email Updates’,toggle:true,on:false}]},
+{title:‘Support’,rows:[
+{ico:’#14F195’,bg:‘rgba(20,241,149,.12)’,path:’<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>’,lbl:‘Help Center’,right:’’},
+{ico:’#ab9ff2’,bg:‘rgba(171,159,242,.15)’,path:’<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>’,lbl:‘Send Feedback’,right:’’}]}];
+var h=’’;
+for(var s=0;s<secs.length;s++){var sec=secs[s];
+h+=’<div class="set-section"><div class="set-section-lbl">’+sec.title+’</div></div>’;
+for(var r=0;r<sec.rows.length;r++){var rw=sec.rows[r];
+h+=’<div class="set-row" onclick="showToast(''+rw.lbl+'')">’;
+h+=’<div class="set-left"><div class="set-icon" style="background:'+rw.bg+'">’;
+h+=’<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="'+rw.ico+'" stroke-width="2" stroke-linecap="round">’+rw.path+’</svg></div>’;
+h+=’<div class="set-lbl">’+rw.lbl+’</div></div><div class="set-right">’;
+if(rw.toggle){h+=’<div class="toggle'+(rw.on?'':' off')+'" onclick="event.stopPropagation();this.classList.toggle('off')"></div>’;}
+else{if(rw.right)h+=’<span style="color:#7a78a0;font-size:13px">’+rw.right+’</span>’;h+=’<svg width="14" height="14"><use href="#ico-chevright"/></svg>’;}
+h+=’</div></div>’;}}
+var el=document.getElementById(‘settings-body’);if(el)el.innerHTML=h;
+var nb=document.getElementById(‘bnav-settings’);if(nb)nb.innerHTML=makeNav(‘settings’);}
 
-// ── MODALS ──
-function openModal(type) {
-if (type === ‘receive’) {
-buildChips(‘recv-chips’, recvToken.id, id => {
-recvToken = TOKENS.find(t=>t.id===id);
-document.getElementById(‘recv-addr’).textContent = recvToken.addr;
-drawQR(recvToken.addr);
-});
-document.getElementById(‘recv-addr’).textContent = recvToken.addr;
-setTimeout(()=>drawQR(recvToken.addr), 50);
-}
-if (type === ‘send’) {
-buildChips(‘send-chips’, sendToken.id, id => { sendToken = TOKENS.find(t=>t.id===id); });
-document.getElementById(‘send-addr’).value = ‘’;
-document.getElementById(‘send-amt’).value  = ‘’;
-}
-if (type === ‘buy’) {
-buildChips(‘buy-chips’, buyToken.id, id => { buyToken = TOKENS.find(t=>t.id===id); calcBuy(); });
-document.getElementById(‘buy-usd’).value = ‘500’;
-calcBuy();
-}
-document.getElementById(‘modal-’+type).classList.add(‘open’);
-}
-function closeModal(type) { document.getElementById(‘modal-’+type).classList.remove(‘open’); }
+function openModal(type){
+if(type===‘receive’){
+buildChips(‘recv-chips’,recvToken.id,function(id){
+for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){recvToken=TOKENS[i];break;}}
+document.getElementById(‘recv-addr’).textContent=recvToken.addr;drawQR(recvToken.addr);});
+document.getElementById(‘recv-addr’).textContent=recvToken.addr;
+setTimeout(function(){drawQR(recvToken.addr);},50);}
+if(type===‘send’){
+buildChips(‘send-chips’,sendToken.id,function(id){for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){sendToken=TOKENS[i];break;}}});
+document.getElementById(‘send-addr’).value=’’;document.getElementById(‘send-amt’).value=’’;}
+if(type===‘buy’){
+buildChips(‘buy-chips’,buyToken.id,function(id){for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){buyToken=TOKENS[i];break;}}calcBuy();});
+document.getElementById(‘buy-usd’).value=‘500’;calcBuy();}
+document.getElementById(‘modal-’+type).classList.add(‘open’);}
 
-function buildChips(cid, activeId, cb) {
-const c = document.getElementById(cid);
-c.innerHTML = TOKENS.map(t=>` <div class="chip${t.id===activeId?' sel':''}" onclick="pickChip(this,'${cid}','${t.id}')"> <div class="chip-dot" style="background:${CLRS[t.id]}"></div>${t.sym} </div>`).join(’’);
-c._cb = cb;
-}
-function pickChip(el, cid, id) {
-document.querySelectorAll(`#${cid} .chip`).forEach(c=>c.classList.remove(‘sel’));
+function closeModal(type){document.getElementById(‘modal-’+type).classList.remove(‘open’);}
+
+function buildChips(cid,aid,cb){
+var c=document.getElementById(cid),h=’’;
+for(var i=0;i<TOKENS.length;i++){var t=TOKENS[i];
+h+=’<div class="chip'+(t.id===aid?' sel':'')+'" onclick="pickChip(this,''+cid+'',''+t.id+'')">’;
+h+=’<div class="chip-dot" style="background:'+CLRS[t.id]+'"></div>’+t.sym+’</div>’;}
+c.innerHTML=h;c._cb=cb;}
+
+function pickChip(el,cid,id){
+var cs=document.querySelectorAll(’#’+cid+’ .chip’);
+for(var i=0;i<cs.length;i++)cs[i].classList.remove(‘sel’);
 el.classList.add(‘sel’);
-const c = document.getElementById(cid);
-if (c._cb) c._cb(id);
-}
+var c=document.getElementById(cid);if(c._cb)c._cb(id);}
 
-function confirmSend() {
-const addr = document.getElementById(‘send-addr’).value.trim();
-const amt  = parseFloat(document.getElementById(‘send-amt’).value);
-if (!addr)     { showToast(‘Enter recipient address’); return; }
-if (!amt || amt <= 0) { showToast(‘Enter a valid amount’); return; }
-closeModal(‘send’);
-showToast(`Sent ${amt} ${sendToken.sym} ✓`);
-}
+function confirmSend(){
+var addr=document.getElementById(‘send-addr’).value.trim();
+var amt=parseFloat(document.getElementById(‘send-amt’).value);
+if(!addr){showToast(‘Enter recipient address’);return;}
+if(!amt||amt<=0){showToast(‘Enter a valid amount’);return;}
+closeModal(‘send’);showToast(‘Sent ‘+amt+’ ‘+sendToken.sym+’ OK’);}
 
-function calcBuy() {
-const usd = parseFloat(document.getElementById(‘buy-usd’).value) || 0;
-const decimals = buyToken.id === ‘usdc’ ? 2 : 6;
-const gets = usd > 0 ? (usd / buyToken.price).toFixed(decimals) : ‘0’;
-document.getElementById(‘buy-gets’).textContent = `${gets} ${buyToken.sym}`;
-}
+function calcBuy(){
+var usd=parseFloat(document.getElementById(‘buy-usd’).value)||0;
+var dec=buyToken.id===‘usdc’?2:6;
+var gets=usd>0?(usd/buyToken.price).toFixed(dec):‘0’;
+document.getElementById(‘buy-gets’).textContent=gets+’ ’+buyToken.sym;}
 
-// ── SWAP (fixed: starts at 0, calculates correctly) ──
-// ── SWAP STATE ──
-let swapFrom = TOKENS[0]; // BTC
-let swapTo   = TOKENS[2]; // SOL
-let swapPickerTarget = ‘from’; // which side we’re picking for
+function initSwap(){renderSwapSide(‘from’,swapFrom);renderSwapSide(‘to’,swapTo);calcSwap();}
 
-function initSwap() {
-renderSwapSide(‘from’, swapFrom);
-renderSwapSide(‘to’,   swapTo);
-calcSwap();
-}
+function renderSwapSide(side,token){
+var le=document.getElementById(‘swap-’+side+’-logo’);
+var se=document.getElementById(‘swap-’+side+’-sym’);
+var be=document.getElementById(‘swap-’+side+’-bal’);
+if(!le)return;
+le.innerHTML=LOGOS[token.id].replace(‘class=“logo”’,‘width=“22” height=“22” style=“border-radius:50%;vertical-align:middle”’);
+se.textContent=token.sym;be.textContent=’Balance: ‘+token.bal+’ ’+token.sym;}
 
-function renderSwapSide(side, token) {
-const logoEl = document.getElementById(`swap-${side}-logo`);
-const symEl  = document.getElementById(`swap-${side}-sym`);
-const balEl  = document.getElementById(`swap-${side}-bal`);
-if (!logoEl) return;
-// Mini logo (22px inline svg)
-logoEl.innerHTML = LOGOS[token.id].replace(‘class=“logo”’, ‘width=“22” height=“22” style=“border-radius:50%;vertical-align:middle”’);
-symEl.textContent = token.sym;
-balEl.textContent = `Balance: ${token.bal} ${token.sym}`;
-}
+function openSwapPicker(side){
+swapPickerTarget=side;
+document.getElementById(‘picker-title’).textContent=side===‘from’?‘You pay’:‘You receive’;
+var h=’’;
+for(var i=0;i<TOKENS.length;i++){var t=TOKENS[i];
+h+=’<div class="tok-item" onclick="selectSwapToken(''+t.id+'')" style="margin:2px 4px">’;
+h+=’<div class="tok-ico">’+LOGOS[t.id]+BADGE+’</div>’;
+h+=’<div class="tok-info"><div class="tok-name">’+t.name+’</div><div class="tok-amt">’+t.bal+’ ‘+t.sym+’</div></div>’;
+h+=’<div class="tok-val"><div class="tok-usd">’+t.usd+’</div><div class="tok-pct '+(t.up?'up':'dn')+'">’+t.pct+’</div></div></div>’;}
+document.getElementById(‘picker-list’).innerHTML=h;
+openModal(‘swap-picker’);}
 
-function openSwapPicker(side) {
-swapPickerTarget = side;
-document.getElementById(‘picker-title’).textContent = side === ‘from’ ? ‘You pay’ : ‘You receive’;
-const list = document.getElementById(‘picker-list’);
-list.innerHTML = TOKENS.map(t => `<div class="tok-item" onclick="selectSwapToken('${t.id}')" style="margin:2px 4px"> <div class="tok-ico">${LOGOS[t.id]}${BADGE}</div> <div class="tok-info"> <div class="tok-name">${t.name}</div> <div class="tok-amt">${t.bal} ${t.sym}</div> </div> <div class="tok-val"> <div class="tok-usd">${t.usd}</div> <div class="tok-pct ${t.up?'up':'dn'}">${t.pct}</div> </div> </div>`).join(’’);
-openModal(‘swap-picker’);
-}
+function selectSwapToken(id){
+var token=null;for(var i=0;i<TOKENS.length;i++){if(TOKENS[i].id===id){token=TOKENS[i];break;}}
+if(swapPickerTarget===‘from’){if(token.id===swapTo.id)swapTo=swapFrom;swapFrom=token;}
+else{if(token.id===swapFrom.id)swapFrom=swapTo;swapTo=token;}
+renderSwapSide(‘from’,swapFrom);renderSwapSide(‘to’,swapTo);
+document.getElementById(‘swap-in’).value=’’;calcSwap();closeModal(‘swap-picker’);}
 
-function selectSwapToken(id) {
-const token = TOKENS.find(t => t.id === id);
-if (swapPickerTarget === ‘from’) {
-if (token.id === swapTo.id) swapTo = swapFrom; // auto-swap other side
-swapFrom = token;
-} else {
-if (token.id === swapFrom.id) swapFrom = swapTo; // auto-swap other side
-swapTo = token;
-}
-renderSwapSide(‘from’, swapFrom);
-renderSwapSide(‘to’,   swapTo);
-// Reset input
-document.getElementById(‘swap-in’).value = ‘’;
-calcSwap();
-closeModal(‘swap-picker’);
-}
+function flipSwapTokens(){
+var btn=document.getElementById(‘swap-flip-btn’);
+btn.style.transform=‘rotate(180deg)’;
+setTimeout(function(){btn.style.transform=’’;},300);
+var tmp=swapFrom;swapFrom=swapTo;swapTo=tmp;
+renderSwapSide(‘from’,swapFrom);renderSwapSide(‘to’,swapTo);
+var v=parseFloat(document.getElementById(‘swap-in’).value);if(v>0)calcSwap();}
 
-function flipSwapTokens() {
-// Animate the arrow
-const btn = document.getElementById(‘swap-flip-btn’);
-btn.style.transform = ‘rotate(180deg)’;
-setTimeout(() => btn.style.transform = ‘’, 300);
-// Swap tokens
-const tmp = swapFrom;
-swapFrom = swapTo;
-swapTo = tmp;
-renderSwapSide(‘from’, swapFrom);
-renderSwapSide(‘to’,   swapTo);
-// If there was an input, recalculate
-const val = parseFloat(document.getElementById(‘swap-in’).value);
-if (val > 0) calcSwap();
-}
+function calcSwap(){
+var raw=document.getElementById(‘swap-in’).value;
+var val=parseFloat(raw);
+var btn=document.getElementById(‘swap-btn’),bl=document.getElementById(‘swap-btn-label’),ib=document.getElementById(‘swap-info-box’);
+if(!raw||isNaN(val)||val<=0){
+document.getElementById(‘swap-out’).textContent=‘0’;
+document.getElementById(‘swap-in-usd’).textContent=‘approx $0.00’;
+document.getElementById(‘swap-out-usd’).textContent=‘approx $0.00’;
+ib.style.display=‘none’;btn.disabled=true;bl.textContent=‘Enter an amount’;return;}
+var inUsd=val*swapFrom.price,outVal=inUsd/swapTo.price,rate=swapFrom.price/swapTo.price;
+document.getElementById(‘swap-out’).textContent=outVal.toLocaleString(undefined,{maximumFractionDigits:6});
+document.getElementById(‘swap-in-usd’).textContent=‘approx $’+inUsd.toLocaleString(undefined,{maximumFractionDigits:2});
+document.getElementById(‘swap-out-usd’).textContent=‘approx $’+(outVal*swapTo.price).toLocaleString(undefined,{maximumFractionDigits:2});
+document.getElementById(‘swap-rate’).textContent=’1 ‘+swapFrom.sym+’ = ‘+rate.toLocaleString(undefined,{maximumFractionDigits:4})+’ ’+swapTo.sym;
+ib.style.display=‘block’;btn.disabled=false;
+bl.textContent=’Swap ‘+val+’ ‘+swapFrom.sym+’ to ’+swapTo.sym;}
 
-function calcSwap() {
-const raw = document.getElementById(‘swap-in’).value;
-const val = parseFloat(raw);
-const btn      = document.getElementById(‘swap-btn’);
-const btnLabel = document.getElementById(‘swap-btn-label’);
-const infoBox  = document.getElementById(‘swap-info-box’);
+function confirmSwap(){
+var val=parseFloat(document.getElementById(‘swap-in’).value);if(!val||val<=0)return;
+var out=document.getElementById(‘swap-out’).textContent;
+showToast(‘Swap confirmed: ‘+val+’ ‘+swapFrom.sym+’ to ‘+out+’ ‘+swapTo.sym);
+document.getElementById(‘swap-in’).value=’’;calcSwap();}
 
-if (!raw || isNaN(val) || val <= 0) {
-document.getElementById(‘swap-out’).textContent     = ‘0’;
-document.getElementById(‘swap-in-usd’).textContent  = ‘≈ $0.00’;
-document.getElementById(‘swap-out-usd’).textContent = ‘≈ $0.00’;
-infoBox.style.display = ‘none’;
-btn.disabled = true;
-btnLabel.textContent = ‘Inserisci un importo’;
-return;
-}
+function drawQR(addr){
+var canvas=document.getElementById(‘qr-canvas’);if(!canvas)return;
+var ctx=canvas.getContext(‘2d’),sz=156,cells=29,cell=sz/cells;
+ctx.fillStyle=’#fff’;ctx.fillRect(0,0,sz,sz);
+var s=0;for(var i=0;i<addr.length;i++)s=(Math.imul(s,31)+addr.charCodeAt(i))|0;
+s=s>>>0;
+var rng=function(){s^=s<<13;s^=s>>17;s^=s<<5;return(s>>>0)/0xffffffff;};
+ctx.fillStyle=’#111’;
+for(var r=0;r<cells;r++)for(var c=0;c<cells;c++){if(rng()>0.5)ctx.fillRect(c*cell,r*cell,cell-0.5,cell-0.5);}
+var finder=function(x,y){
+ctx.fillStyle=’#111’;ctx.fillRect(x,y,7*cell,7*cell);
+ctx.fillStyle=’#fff’;ctx.fillRect(x+cell,y+cell,5*cell,5*cell);
+ctx.fillStyle=’#111’;ctx.fillRect(x+2*cell,y+2*cell,3*cell,3*cell);};
+finder(0,0);finder((cells-7)*cell,0);finder(0,(cells-7)*cell);}
 
-// Cross-rate: fromUSD / toUSD
-const inUsd  = val * swapFrom.price;
-const outVal = inUsd / swapTo.price;
-const outUsd = outVal * swapTo.price;
-const rate   = swapFrom.price / swapTo.price;
+function copyAddr(){
+var addr=document.getElementById(‘recv-addr’).textContent;
+if(navigator.clipboard)navigator.clipboard.writeText(addr).catch(function(){});
+var btn=document.getElementById(‘copy-btn’);
+btn.textContent=‘Copied!’;btn.classList.add(‘copied’);
+setTimeout(function(){btn.textContent=‘Copy’;btn.classList.remove(‘copied’);},2000);
+showToast(‘Address copied’);}
 
-document.getElementById(‘swap-out’).textContent     = outVal.toLocaleString(undefined,{maximumFractionDigits:6});
-document.getElementById(‘swap-in-usd’).textContent  = `≈ $${inUsd.toLocaleString(undefined,{maximumFractionDigits:2})}`;
-document.getElementById(‘swap-out-usd’).textContent = `≈ $${outUsd.toLocaleString(undefined,{maximumFractionDigits:2})}`;
-document.getElementById(‘swap-rate’).textContent    = `1 ${swapFrom.sym} ≈ ${rate.toLocaleString(undefined,{maximumFractionDigits:4})} ${swapTo.sym}`;
-infoBox.style.display = ‘block’;
-btn.disabled = false;
-btnLabel.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/></svg> Swap ${val} ${swapFrom.sym} → ${swapTo.sym}`;
-}
+var _tt;
+function showToast(msg){
+var el=document.getElementById(‘toast-el’);
+el.textContent=msg;el.classList.add(‘show’);
+clearTimeout(_tt);_tt=setTimeout(function(){el.classList.remove(‘show’);},2200);}
 
-function confirmSwap() {
-const val = parseFloat(document.getElementById(‘swap-in’).value);
-if (!val || val <= 0) return;
-const out = document.getElementById(‘swap-out’).textContent;
-showToast(`✓ Swap ${val} ${swapFrom.sym} → ${out} ${swapTo.sym}`);
-document.getElementById(‘swap-in’).value = ‘’;
-calcSwap();
-}
+// PULL TO REFRESH
+(function(){
+var ptr=document.getElementById(‘ptr-indicator’);
+var startY=0,pulling=false,triggered=false,threshold=75,maxPull=110;
+document.addEventListener(‘touchstart’,function(e){
+var scr=document.getElementById(activeScreen);
+var sc=scr?scr.querySelector(’.scroll’):null;
+if(sc&&sc.scrollTop>2)return;
+startY=e.touches[0].clientY;pulling=true;triggered=false;
+},{passive:true});
+document.addEventListener(‘touchmove’,function(e){
+if(!pulling)return;
+var scr=document.getElementById(activeScreen);
+var sc=scr?scr.querySelector(’.scroll’):null;
+if(sc&&sc.scrollTop>2){pulling=false;return;}
+var dy=e.touches[0].clientY-startY;
+if(dy<=0){pulling=false;return;}
+var pull=Math.min(dy*0.5,maxPull);
+ptr.style.transform=‘translateX(-50%) translateY(’+(pull-44)+‘px)’;
+ptr.style.opacity=Math.min(pull/threshold,1);
+ptr.querySelector(’.ptr-icon’).style.transform=‘rotate(’+(pull/maxPull*360)+‘deg)’;
+if(pull>=threshold&&!triggered){triggered=true;
+ptr.querySelector(’.ptr-icon’).style.color=’#ab9ff2’;
+ptr.querySelector(’.ptr-text’).textContent=‘Release to refresh’;
+}else if(pull<threshold){triggered=false;
+ptr.querySelector(’.ptr-icon’).style.color=’#7a78a0’;
+ptr.querySelector(’.ptr-text’).textContent=‘Pull to refresh’;}
+},{passive:true});
+document.addEventListener(‘touchend’,function(){
+if(!pulling)return;pulling=false;
+if(triggered){
+ptr.querySelector(’.ptr-text’).textContent=‘Refreshing…’;
+ptr.style.transform=‘translateX(-50%) translateY(30px)’;
+setTimeout(function(){location.reload();},600);
+}else{ptr.style.transform=‘translateX(-50%) translateY(-44px)’;ptr.style.opacity=‘0’;}
+});
+})();
 
-// ── QR ──
-function drawQR(addr) {
-const canvas = document.getElementById(‘qr-canvas’);
-if (!canvas) return;
-const ctx = canvas.getContext(‘2d’);
-const sz = 156, cells = 29, cell = sz/cells;
-ctx.fillStyle = ‘#fff’; ctx.fillRect(0,0,sz,sz);
-// seed RNG from address
-let s = 0;
-for(let i=0;i<addr.length;i++) s = Math.imul(s,31) + addr.charCodeAt(i) | 0;
-s = s >>> 0;
-const rng = ()=>{ s^=s<<13; s^=s>>17; s^=s<<5; return (s>>>0)/0xffffffff; };
-// draw random data cells
-ctx.fillStyle = ‘#111’;
-for(let r=0;r<cells;r++) for(let c=0;c<cells;c++) { if(rng()>.5) ctx.fillRect(c*cell,r*cell,cell-.5,cell-.5); }
-// overdraw finder patterns (top-left, top-right, bottom-left)
-const finder=(x,y)=>{
-ctx.fillStyle=’#111’; ctx.fillRect(x,y,7*cell,7*cell);
-ctx.fillStyle=’#fff’; ctx.fillRect(x+cell,y+cell,5*cell,5*cell);
-ctx.fillStyle=’#111’; ctx.fillRect(x+2*cell,y+2*cell,3*cell,3*cell);
-};
-finder(0,0); finder((cells-7)*cell,0); finder(0,(cells-7)*cell);
-}
-
-// ── COPY ──
-function copyAddr() {
-const addr = document.getElementById(‘recv-addr’).textContent;
-navigator.clipboard.writeText(addr).catch(()=>{});
-const btn = document.getElementById(‘copy-btn’);
-btn.textContent = ‘Copied!’; btn.classList.add(‘copied’);
-setTimeout(()=>{ btn.textContent=‘Copy’; btn.classList.remove(‘copied’); }, 2000);
-showToast(‘Address copied ✓’);
-}
-
-// ── TOAST ──
-let _tt;
-function showToast(msg) {
-const el = document.getElementById(‘toast-el’);
-el.textContent = msg; el.classList.add(‘show’);
-clearTimeout(_tt); _tt = setTimeout(()=>el.classList.remove(‘show’), 2200);
-}
-
-// Init - compatibile con tutti i browser incluso Safari iOS
-function _init() {
-// renderTabBody sovrascrive solo se tab-body è vuoto (già pre-renderizzato nell’HTML)
-if (!document.getElementById(‘tab-body’).children.length) {
+// INIT
+function _init(){
+var nb=document.getElementById(‘bnav-main’);
+if(nb)nb.innerHTML=makeNav(‘portfolio’);
 renderTabBody();
-}
-// Nav: già pre-renderizzata nell’HTML, ma aggiorna i marker attivi
-updateNavHighlight();
-// Le altre sezioni si renderizzano solo quando l’utente ci va
-// Inizializza swap
 initSwap();
 }
-window.onload = _init;
-// Fallback extra
-if (document.readyState === ‘complete’) { setTimeout(_init, 10); }
+window.onload=_init;
+if(document.readyState===‘complete’)setTimeout(_init,10);
 </script>
 
 </body>
