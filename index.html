@@ -34,30 +34,34 @@ position:relative;}
 
 /* Mobile: full screen, niente frame */
 @media (max-width: 430px) {
-html, body {
-margin: 0 !important;
-padding: 0 !important;
-width: 100% !important;
-height: 100% !important;
-background: #16213e !important;
-overflow: hidden;
+html {
+height: 100%;
+background: #16213e;
 }
 body {
-display: block !important;
-min-height: -webkit-fill-available;
+display: block;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+background: #16213e;
+overflow: hidden;
 }
 .phone {
-width: 100% !important;
-height: 100vh !important;
-height: -webkit-fill-available !important;
-border-radius: 0 !important;
-box-shadow: none !important;
+width: 100vw;
+height: 100%;
+min-height: 100%;
+border-radius: 0;
+box-shadow: none;
 }
 .bnav {
-padding-bottom: calc(12px + env(safe-area-inset-bottom, 20px)) !important;
+padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 }
 .hdr {
-padding-top: max(26px, env(safe-area-inset-top, 26px)) !important;
+padding-top: calc(26px + env(safe-area-inset-top, 0px));
+}
+.modal-bg {
+border-radius: 0;
 }
 }
 /* Dynamic island */
@@ -320,8 +324,35 @@ pointer-events:none;
     <div class="tab" id="tab-nfts" onclick="switchTab('nfts')">NFTs</div>
     <div class="tab" id="tab-activity" onclick="switchTab('activity')">Activity</div>
   </div>
-  <div class="scroll" id="tab-body"></div>
-  <div class="bnav" id="bnav-main"></div>
+  <div class="scroll" id="tab-body">
+      <div class="tok-item" onclick="openDetail('btc')">
+        <div class="tok-ico"><svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#F7931A"/><path fill="white" d="M29 19.6c.4-2.8-1.7-4.3-4.6-5.3l.9-3.7-2.3-.6-.9 3.6-.6-.1.9-3.6-2.3-.6-.9 3.7-.5-.1-3-.7-.6 2.4s1.7.4 1.6.4c.9.2 1.1.8 1 1.3l-2.4 9.8c-.1.3-.5.8-1.2.6l-1.6-.4-1.1 2.6 2.8.7 1.6.4-1 3.8 2.3.6 1-3.8.6.2-1 3.7 2.3.6 1-3.7c4 .8 7 .4 8.2-3.1.9-2.7 0-4.2-2-5.2 1.5-.3 2.5-1.3 2.8-3.1zm-5 7c-.7 2.7-5.3 1.3-6.8.9l1.2-4.8c1.5.4 6.4 1.1 5.6 3.9zm.7-7.1c-.6 2.4-4.5 1.2-5.7.9l1.1-4.3c1.3.3 5.3.9 4.6 3.4z"/></svg><div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div></div>
+        <div class="tok-info"><div class="tok-name">Bitcoin</div><div class="tok-amt">5.8200 BTC</div></div>
+        <div class="tok-val"><div class="tok-usd">$497,831.00</div><div class="tok-pct up">+2.14%</div></div>
+      </div><div class="divider"></div>
+      <div class="tok-item" onclick="openDetail('eth')">
+        <div class="tok-ico"><svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#627EEA"/><polygon points="21,8 21,18.6 29.5,22.2" fill="white" opacity="0.9"/><polygon points="21,8 12.5,22.2 21,18.6" fill="white" opacity="0.6"/><polygon points="21,27.8 29.5,23.3 21,18.6" fill="white" opacity="0.9"/><polygon points="12.5,23.3 21,27.8 21,18.6" fill="white" opacity="0.6"/><polygon points="21,29.2 29.5,24.7 21,34" fill="white" opacity="0.9"/><polygon points="12.5,24.7 21,34 21,29.2" fill="white" opacity="0.6"/></svg><div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div></div>
+        <div class="tok-info"><div class="tok-name">Ethereum</div><div class="tok-amt">62.4000 ETH</div></div>
+        <div class="tok-val"><div class="tok-usd">$197,534.40</div><div class="tok-pct up">+4.31%</div></div>
+      </div><div class="divider"></div>
+      <div class="tok-item" onclick="openDetail('sol')">
+        <div class="tok-ico"><svg class="logo" viewBox="0 0 42 42"><defs><linearGradient id="sG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9945FF"/><stop offset="100%" stop-color="#14F195"/></linearGradient></defs><circle cx="21" cy="21" r="21" fill="url(#sG)"/><path d="M11 27.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.95"/><path d="M11 18.5h16.5l-3 3H8.5l2.5-3z" fill="white" opacity="0.85"/><path d="M27.5 9.5H11L13.5 12.5H31l-3.5-3z" fill="white" opacity="0.75"/></svg><div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div></div>
+        <div class="tok-info"><div class="tok-name">Solana</div><div class="tok-amt">1,240.00 SOL</div></div>
+        <div class="tok-val"><div class="tok-usd">$112,947.60</div><div class="tok-pct up">+6.88%</div></div>
+      </div><div class="divider"></div>
+      <div class="tok-item" onclick="openDetail('usdc')">
+        <div class="tok-ico"><svg class="logo" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#2775CA"/><circle cx="21" cy="21" r="13.5" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/><path fill="white" d="M21 10.5c5.8 0 10.5 4.7 10.5 10.5S26.8 31.5 21 31.5 10.5 26.8 10.5 21 15.2 10.5 21 10.5zm0 1.5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm.8 4.5v1.3c1.8.3 3 1.3 3 2.8h-1.6c0-.8-.5-1.3-1.2-1.3-.7 0-1.1.4-1.1 1 0 .5.4.9 1.4 1.2 1.8.5 2.9 1.3 2.9 2.9 0 1.5-1.1 2.5-3.2 2.8V29h-1.6v-1.3c-2-.3-3.2-1.4-3.2-3h1.7c0 .9.6 1.4 1.5 1.4.8 0 1.3-.4 1.3-1.1 0-.6-.4-1-1.5-1.3-1.8-.5-2.8-1.3-2.8-2.8 0-1.4 1-2.4 3-2.7V16.5h1.6z"/></svg><div class="chain-badge"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M4 17.5h14L15 21H2l2-3.5zm0-5.5h14l-3 3.5H2L4 12zm11-5.5H4L6 3h13l-4 3.5z" fill="white"/></svg></div></div>
+        <div class="tok-info"><div class="tok-name">USD Coin</div><div class="tok-amt">38,980.12 USDC</div></div>
+        <div class="tok-val"><div class="tok-usd">$38,980.12</div><div class="tok-pct dn">−0.01%</div></div>
+      </div><div class="divider"></div>
+    </div>
+  <div class="bnav" id="bnav-main">
+    <div class="nav-it active" data-nav="portfolio" onclick="navTo('portfolio')"><div class="nav-ico"><svg width="22" height="22"><use href="#ico-portfolio"/></svg></div><div class="nav-lbl">Portfolio</div></div>
+    <div class="nav-it" data-nav="swap" onclick="navTo('swap')"><div class="nav-ico"><svg width="22" height="22"><use href="#ico-swap"/></svg></div><div class="nav-lbl">Swap</div></div>
+    <div class="nav-it" data-nav="discover" onclick="navTo('discover')"><div class="nav-ico"><svg width="22" height="22"><use href="#ico-discover"/></svg></div><div class="nav-lbl">Discover</div></div>
+    <div class="nav-it" data-nav="markets" onclick="navTo('markets')"><div class="nav-ico"><svg width="22" height="22"><use href="#ico-markets"/></svg></div><div class="nav-lbl">Markets</div></div>
+    <div class="nav-it" data-nav="settings" onclick="navTo('settings')"><div class="nav-ico"><svg width="22" height="22"><use href="#ico-settings"/></svg></div><div class="nav-lbl">Settings</div></div>
+  </div>
 </div>
 
 <!-- ████ SCREEN: TOKEN DETAIL ████ -->
@@ -573,10 +604,18 @@ let buyToken  = TOKENS[0];
 // ── SCREEN NAV ──
 const NAV_SCREENS = {portfolio:‘s-portfolio’,swap:‘s-swap’,discover:‘s-discover’,markets:‘s-markets’,settings:‘s-settings’};
 
+const _rendered = {};
 function navTo(key) {
 if (key === ‘swap’) { pushScreen(‘s-swap’); activeNav = ‘swap’; updateNavHighlight(); return; }
 const targetId = NAV_SCREENS[key];
 if (!targetId || activeScreen === targetId) return;
+// Lazy render on first visit
+if (!_rendered[key]) {
+_rendered[key] = true;
+if (key === ‘markets’)  renderMarkets();
+if (key === ‘discover’) renderDiscover();
+if (key === ‘settings’) renderSettings();
+}
 const cur = document.getElementById(activeScreen);
 const next = document.getElementById(targetId);
 cur.classList.add(‘hidden’);
@@ -971,28 +1010,21 @@ el.textContent = msg; el.classList.add(‘show’);
 clearTimeout(_tt); _tt = setTimeout(()=>el.classList.remove(‘show’), 2200);
 }
 
-document.addEventListener(‘DOMContentLoaded’, function() {
-document.getElementById(‘bnav-main’).innerHTML = makeNav(‘portfolio’);
+// Init - compatibile con tutti i browser incluso Safari iOS
+function _init() {
+// renderTabBody sovrascrive solo se tab-body è vuoto (già pre-renderizzato nell’HTML)
+if (!document.getElementById(‘tab-body’).children.length) {
 renderTabBody();
-renderMarkets();
-renderDiscover();
-renderSettings();
-initSwap();
-});
-
-// Fallback per Safari iOS che a volte ignora DOMContentLoaded su file serviti
-if (document.readyState === ‘complete’ || document.readyState === ‘interactive’) {
-setTimeout(function() {
-if (!document.getElementById(‘bnav-main’).innerHTML) {
-document.getElementById(‘bnav-main’).innerHTML = makeNav(‘portfolio’);
-renderTabBody();
-renderMarkets();
-renderDiscover();
-renderSettings();
+}
+// Nav: già pre-renderizzata nell’HTML, ma aggiorna i marker attivi
+updateNavHighlight();
+// Le altre sezioni si renderizzano solo quando l’utente ci va
+// Inizializza swap
 initSwap();
 }
-}, 0);
-}
+window.onload = _init;
+// Fallback extra
+if (document.readyState === ‘complete’) { setTimeout(_init, 10); }
 </script>
 
 </body>
