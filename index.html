@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Phantom">
 <meta name="theme-color" content="#16213e">
 <title>Phantom Wallet</title>
@@ -38,7 +38,7 @@ position:relative;}
 
 /* Mobile: full screen, niente frame */
 @media (max-width: 430px) {
-.hdr { padding-top: max(50px, env(safe-area-inset-top)); }
+.hdr { padding-top: 16px; }
 html {
 height: 100%;
 background: #16213e;
@@ -108,7 +108,7 @@ padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 
 /* TABS */
 .tabs{display:flex;border-bottom:1px solid var(–border);padding:0 20px;flex-shrink:0;}
-.tab{flex:1;text-align:center;padding:10px 0;font-size:13px;font-weight:600;color:#b0aec8;cursor:pointer;position:relative;transition:color .2s;user-select:none;-webkit-tap-highlight-color:transparent;}
+.tab{flex:1;text-align:center;padding:10px 0;font-size:13px;font-weight:600;color:#7a78a0;cursor:pointer;position:relative;transition:color .2s;user-select:none;-webkit-tap-highlight-color:transparent;}
 .tab.active{color:var(–purple);}
 .tab.active::after{content:’’;position:absolute;bottom:-1px;left:20%;right:20%;height:2px;background:var(–purple);border-radius:2px;}
 
