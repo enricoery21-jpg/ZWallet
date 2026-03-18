@@ -308,21 +308,204 @@ var T=[
 var C={btc:'#F7931A',eth:'#627EEA',sol:'#9945FF',usdc:'#2775CA',bnb:'#F3BA2F',xrp:'#346AA9',ada:'#0033AD',avax:'#E84142',dot:'#E6007A',link:'#2A5ADA',uni:'#FF007A',matic:'#8247E5'};
 
 // === LOGHI MODIFICATI IN PNG (ufficiali, trasparenti) ===
-var IN={
-  btc: '<img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  eth: '<img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  sol: '<img src="https://cryptologos.cc/logos/solana-sol-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  usdc: '<img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  bnb: '<img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  xrp: '<img src="https://cryptologos.cc/logos/xrp-xrp-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  ada: '<img src="https://cryptologos.cc/logos/cardano-ada-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  avax: '<img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  dot: '<img src="https://cryptologos.cc/logos/polkadot-dot-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  link: '<img src="https://cryptologos.cc/logos/chainlink-link-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  uni: '<img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
-  matic: '<img src="https://cryptologos.cc/logos/polygon-matic-logo.png" width="42" height="42" style="border-radius:50%;display:block;">'
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="apple-touch-icon" href="IMG_5291.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Phantom">
+<meta name="theme-color" content="#16213e">
+<title>Phantom Wallet</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Tutto lo stile rimane IDENTICO a prima - non l'ho toccato */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;background:#131320;}
+body{font-family:'DM Sans',sans-serif;display:flex;justify-content:center;align-items:center;padding:20px;background:#131320;}
+.phone{width:390px;height:844px;background:#16213e;border-radius:44px;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(255,255,255,0.08),0 40px 100px rgba(0,0,0,0.8);}
+@media(max-width:430px){body{display:block;padding:0;height:100%;}.phone{width:100%;height:100%;border-radius:0;box-shadow:none;}}
+.screen{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;background:#16213e;transition:transform 0.28s cubic-bezier(0.4,0,0.2,1),opacity 0.28s;}
+.screen.hidden{transform:translateX(100%);opacity:0;pointer-events:none;}
+.screen.behind{transform:translateX(-30px);opacity:0;pointer-events:none;}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 10px;flex-shrink:0;}
+@media(max-width:430px){.hdr{padding-top:56px;}}
+.wpill{display:flex;align-items:center;gap:8px;background:#1e2647;border:1px solid rgba(171,159,242,0.15);border-radius:20px;padding:6px 12px 6px 8px;cursor:pointer;}
+.wavt{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ab9ff2,#6c63d5);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;}
+.wname{font-size:13px;font-weight:600;color:#e8e6f8;}
+.ibtn{width:36px;height:36px;background:#1e2647;border:1px solid rgba(171,159,242,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#e8e6f8;flex-shrink:0;}
+.hbtns{display:flex;gap:8px;}
+.back-btn{display:flex;align-items:center;gap:6px;color:#ab9ff2;font-size:14px;font-weight:600;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;padding:0;}
+.bal{text-align:center;padding:2px 20px 18px;flex-shrink:0;}
+.bal-lbl{font-size:11px;color:#7a78a0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.bal-amt{font-size:44px;font-weight:700;color:#e8e6f8;letter-spacing:-2px;line-height:1;margin-bottom:10px;}
+.bal-chg{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#54d890;background:rgba(84,216,144,.1);padding:5px 14px;border-radius:20px;}
+.actions{display:flex;gap:6px;padding:0 16px 20px;flex-shrink:0;}
+.abtn{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;flex:1;}
+.aico{width:52px;height:52px;background:#ab9ff2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 18px rgba(171,159,242,.4);}
+.abtn:active .aico{opacity:.8;}
+.albl{font-size:11px;font-weight:600;color:#7a78a0;}
+.tabs{display:flex;border-bottom:1px solid rgba(171,159,242,.12);padding:0 20px;flex-shrink:0;}
+.tab{flex:1;text-align:center;padding:9px 0;font-size:13px;font-weight:600;color:#7a78a0;cursor:pointer;position:relative;}
+.tab.active{color:#ab9ff2;}
+.tab.active::after{content:'';position:absolute;bottom:-1px;left:20%;right:20%;height:2px;background:#ab9ff2;border-radius:2px;}
+.scroll{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
+.scroll::-webkit-scrollbar{width:0;}
+.trow{display:flex;align-items:center;padding:11px 20px;gap:12px;cursor:pointer;border-radius:12px;margin:1px 8px;}
+.trow:active{background:#1e2647;}
+.tico{width:42px;height:42px;border-radius:50%;flex-shrink:0;position:relative;overflow:visible;}
+.tbadge{position:absolute;bottom:-2px;right:-2px;width:16px;height:16px;background:#9945FF;border-radius:50%;border:2px solid #16213e;display:flex;align-items:center;justify-content:center;}
+.tinfo{flex:1;min-width:0;}
+.tname{font-size:14px;font-weight:600;color:#e8e6f8;}
+.tamt{font-size:12px;color:#7a78a0;margin-top:2px;}
+.tval{text-align:right;}
+.tusd{font-size:14px;font-weight:600;color:#e8e6f8;}
+.tpct{font-size:11px;font-weight:600;margin-top:2px;}
+.tpct.up{color:#54d890;}.tpct.dn{color:#ff6b6b;}
+.tdiv{height:1px;background:rgba(171,159,242,.1);margin:0 20px;}
+.bnav{display:flex;padding:10px 4px 24px;border-top:1px solid rgba(171,159,242,.1);flex-shrink:0;background:#16213e;}
+@media(max-width:430px){.bnav{padding-bottom:max(24px,env(safe-area-inset-bottom,24px));}}
+.nit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:4px 2px;border-radius:10px;}
+.nit:active{background:rgba(171,159,242,.1);}
+.nico{color:#7a78a0;line-height:0;}
+.nlbl{font-size:10px;font-weight:600;color:#7a78a0;}
+.nit.active .nico,.nit.active .nlbl{color:#ab9ff2;}
+.moverlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,8,20,.8);z-index:100;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .25s;}
+.moverlay.open{opacity:1;pointer-events:auto;}
+.mbox{width:100%;background:#18244e;border-radius:26px 26px 0 0;border:1px solid rgba(171,159,242,.12);border-bottom:none;padding:0 0 28px;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1);}
+.moverlay.open .mbox{transform:translateY(0);}
+.mhandle{width:36px;height:4px;background:rgba(171,159,242,.25);border-radius:4px;margin:12px auto 0;}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 4px;}
+.mtitle{font-size:17px;font-weight:700;color:#e8e6f8;}
+.mclose{width:28px;height:28px;border-radius:50%;background:#1e2647;border:1px solid rgba(171,159,242,.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#7a78a0;}
+.mbody{padding:12px 20px 0;}
+.ilbl{font-size:11px;font-weight:600;color:#7a78a0;letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px;}
+.igrp{margin-bottom:12px;}
+.inp{width:100%;background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:12px;padding:12px 14px;font-size:16px;font-weight:500;color:#e8e6f8;font-family:'DM Sans',sans-serif;outline:none;-webkit-appearance:none;appearance:none;}
+.inp::placeholder{color:#7a78a0;}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px;}
+.chip{display:flex;align-items:center;gap:5px;background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:18px;padding:5px 10px 5px 7px;cursor:pointer;font-size:13px;font-weight:600;color:#e8e6f8;}
+.chip.sel{border-color:#ab9ff2;background:rgba(171,159,242,.15);}
+.cdot{width:18px;height:18px;border-radius:50%;flex-shrink:0;}
+.pbtn{width:100%;padding:14px;background:#ab9ff2;border:none;border-radius:12px;color:#fff;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;-webkit-appearance:none;appearance:none;}
+.pbtn:active{opacity:.85;}
+.pbtn.ghost{background:#1e2647;color:#ab9ff2;border:1px solid rgba(171,159,242,.2);}
+.qrwrap{display:flex;flex-direction:column;align-items:center;padding:6px 0 10px;}
+.qrbox{width:164px;height:164px;background:#fff;border-radius:14px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;padding:8px;}
+.arow{background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:11px;padding:10px 13px;width:100%;display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.atxt{font-size:11px;color:#7a78a0;font-family:monospace;word-break:break-all;line-height:1.4;flex:1;}
+.cpybtn{flex-shrink:0;background:rgba(171,159,242,.15);border:1px solid rgba(171,159,242,.2);border-radius:7px;padding:5px 9px;cursor:pointer;font-size:11px;font-weight:600;color:#ab9ff2;font-family:'DM Sans',sans-serif;}
+.cpybtn.ok{background:#54d890;color:#fff;border-color:#54d890;}
+.dhead{padding:0 20px 8px;display:flex;align-items:center;gap:12px;}
+.dbig{font-size:30px;font-weight:700;color:#e8e6f8;letter-spacing:-1px;}
+.dchg{font-size:13px;font-weight:600;margin-top:3px;}
+.perbts{display:flex;gap:3px;margin-bottom:8px;}
+.perbtn{padding:4px 10px;border-radius:8px;font-size:12px;font-weight:600;color:#7a78a0;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.perbtn.active{background:rgba(171,159,242,.15);color:#ab9ff2;}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 20px 18px;}
+.scard{background:#1e2647;border-radius:11px;padding:11px 13px;}
+.slbl{font-size:11px;color:#7a78a0;font-weight:500;margin-bottom:3px;}
+.sval{font-size:14px;font-weight:700;color:#e8e6f8;}
+.swrap{padding:12px 20px 20px;}
+.sbox{background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:14px;padding:14px;margin-bottom:2px;}
+.sblbl{font-size:11px;color:#7a78a0;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:9px;}
+.strow{display:flex;align-items:center;gap:10px;}
+.stpick{display:flex;align-items:center;gap:7px;background:#242d55;border:1px solid rgba(171,159,242,.15);border-radius:18px;padding:5px 11px 5px 7px;cursor:pointer;font-size:14px;font-weight:700;color:#e8e6f8;flex-shrink:0;}
+.sinput{font-size:26px;font-weight:700;color:#e8e6f8;text-align:right;flex:1;background:none;border:none;outline:none;font-family:'DM Sans',sans-serif;-webkit-appearance:none;min-width:0;}
+.sinput::placeholder{color:#7a78a0;}
+.susd{font-size:11px;color:#7a78a0;margin-top:5px;text-align:right;}
+.soutval{font-size:26px;font-weight:700;color:#e8e6f8;text-align:right;flex:1;}
+.sarrow{display:flex;justify-content:center;height:30px;align-items:center;}
+.sarrowbtn{width:30px;height:30px;background:#242d55;border:2px solid #16213e;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#ab9ff2;}
+.sinfo{background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:11px;padding:11px 13px;margin:10px 0;}
+.sirow{display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;}
+.sirow:last-child{margin-bottom:0;}
+.scta{width:100%;padding:14px;margin-top:2px;background:#ab9ff2;border:none;border-radius:14px;color:#fff;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;-webkit-appearance:none;}
+.scta:disabled{opacity:.35;cursor:not-allowed;}
+.scta:not(:disabled):active{opacity:.85;}
+.mrow{display:flex;align-items:center;padding:11px 20px;gap:11px;cursor:pointer;border-radius:12px;margin:1px 8px;}
+.mrow:active{background:#1e2647;}
+.minfo{flex:1;}
+.mname{font-size:14px;font-weight:600;color:#e8e6f8;}
+.mcap{font-size:12px;color:#7a78a0;margin-top:2px;}
+.spark{display:flex;align-items:flex-end;gap:2px;height:26px;}
+.sbar{width:4px;border-radius:2px;}
+.mright{text-align:right;}
+.dbanner{margin:8px 20px;background:linear-gradient(135deg,#2a1f5e,#1a3060);border:1px solid rgba(171,159,242,.15);border-radius:14px;padding:16px;cursor:pointer;}
+.dtag{font-size:10px;font-weight:700;color:#ab9ff2;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
+.dttl{font-size:15px;font-weight:700;color:#e8e6f8;margin-bottom:3px;}
+.dsub{font-size:12px;color:#7a78a0;}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 20px 14px;}
+.dcard{background:#1e2647;border:1px solid rgba(171,159,242,.15);border-radius:13px;padding:13px;cursor:pointer;}
+.dcard:active{background:#242d55;}
+.dctitle{font-size:13px;font-weight:700;color:#e8e6f8;margin-bottom:2px;margin-top:7px;}
+.dcsub{font-size:11px;color:#7a78a0;}
+.ssec{padding:12px 20px 3px;}
+.sseclbl{font-size:11px;font-weight:600;color:#7a78a0;letter-spacing:.07em;text-transform:uppercase;margin-bottom:7px;}
+.srow{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;cursor:pointer;border-radius:12px;margin:1px 8px;}
+.srow:active{background:#1e2647;}
+.sleft{display:flex;align-items:center;gap:11px;}
+.sicon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sright{display:flex;align-items:center;gap:6px;color:#7a78a0;font-size:13px;}
+.tog{width:36px;height:20px;border-radius:10px;background:#ab9ff2;position:relative;cursor:pointer;flex-shrink:0;transition:background .2s;}
+.tog::after{content:'';position:absolute;right:2px;top:2px;width:16px;height:16px;background:#fff;border-radius:50%;transition:right .2s;}
+.tog.off{background:#242d55;}
+.tog.off::after{right:18px;}
+#ptr{position:fixed;top:0;left:50%;transform:translateX(-50%) translateY(-50px);z-index:999;display:flex;align-items:center;gap:7px;background:#1e2647;border:1px solid rgba(171,159,242,.2);border-radius:18px;padding:7px 14px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;}
+#ptrtxt{font-size:12px;font-weight:600;color:#7a78a0;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e2647;border:1px solid rgba(171,159,242,.2);border-radius:11px;padding:9px 18px;font-size:13px;font-weight:600;color:#e8e6f8;white-space:nowrap;z-index:500;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.empty{padding:50px 20px;text-align:center;}
+.etitle{font-size:15px;font-weight:600;color:#e8e6f8;margin-bottom:5px;}
+.esub{font-size:13px;color:#7a78a0;line-height:1.5;}
+</style>
+</head>
+<body>
+
+<!-- SVG symbols (rimasti uguali) -->
+<svg style="display:none">
+  <!-- tutti i <symbol> originali qui - li ho omessi per brevità ma devi tenerli -->
+  <!-- copia i <symbol> dalla tua versione originale -->
+</svg>
+
+<div class="phone" id="app">
+  <!-- tutto il HTML delle schermate rimane IDENTICO (home, detail, swap, modali, ecc.) -->
+  <!-- copia qui tutto il contenuto <div class="phone" id="app"> ... </div> dalla tua versione originale -->
+</div>
+
+<script>
+// === DATI E VARIABILI (uguali) ===
+var T=[ /* ... tutti i token ... */ ];   // copia i tuoi T, C, MKT, BADGE originali
+
+var C={btc:'#F7931A',eth:'#627EEA',sol:'#9945FF',usdc:'#2775CA',bnb:'#F3BA2F',xrp:'#346AA9',ada:'#0033AD',avax:'#E84142',dot:'#E6007A',link:'#2A5ADA',uni:'#FF007A',matic:'#8247E5'};
+
+// === LOGHI IN PNG (versione stabile e veloce) ===
+var IN = {
+  btc:   '<img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  eth:   '<img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  sol:   '<img src="https://assets.coingecko.com/coins/images/4128/large/solana.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  usdc:  '<img src="https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  bnb:   '<img src="https://assets.coingecko.com/coins/images/825/large/bnb-icon2.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  xrp:   '<img src="https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  ada:   '<img src="https://assets.coingecko.com/coins/images/975/large/cardano.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  avax:  '<img src="https://assets.coingecko.com/coins/images/12559/large/Avalanche_Circle_RedWhite_Trans.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  dot:   '<img src="https://assets.coingecko.com/coins/images/12171/large/polkadot.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  link:  '<img src="https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  uni:   '<img src="https://assets.coingecko.com/coins/images/12504/large/uniswap-logo.png" width="42" height="42" style="border-radius:50%;display:block;">',
+  matic: '<img src="https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png" width="42" height="42" style="border-radius:50%;display:block;">'
 };
 
+function logo(id,sz){
+  var s=sz||42;
+  return IN[id] || IN.btc;   // fallback su Bitcoin
+}
+
+// === QUI DEVI INSERIRE TUTTO IL RESTO DEL JAVASCRIPT ORIGINALE ===
+// (goTo, back, navTo, buildList, openDet, mkChart, buildMkt, buildDisc, buildSet, openM, ecc. fino alla fine di window.onload)
+
+// Per non fare il messaggio troppo lungo, copia dal tuo file originale tutto il codice dopo "var IN = {" fino alla fine del file.
 var MKT=[
   {id:'btc',name:'Bitcoin',sym:'BTC',price:'$85,503',chg:'+2.14%',up:true,cap:'$1.68T',spark:[40,52,46,60,55,70,63,78,72,85,80,100]},
   {id:'eth',name:'Ethereum',sym:'ETH',price:'$3,165',chg:'+4.31%',up:true,cap:'$380B',spark:[50,44,58,53,68,63,77,72,83,78,90,100]},
