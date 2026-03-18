@@ -18,13 +18,17 @@
   --border:rgba(171,159,242,0.14);--text:#e8e6f8;--muted:#7a78a0;
   --green:#54d890;--red:#ff6b6b;
 }
-/* Force Safari to recognize background colors */
-html { background:#131320; }
-body { background:#131320; -webkit-text-size-adjust:100%; }
-.phone { background:#16213e !important; }
-.screen { background:#16213e !important; }
-.act-icon { background:#ab9ff2 !important; }
-.bnav { background:#16213e !important; }
+/* Safari iOS: forza i colori base senza dipendere da var() */
+html,body{background-color:#131320;}
+.phone,.screen{background-color:#16213e;}
+.act-icon{background-color:#ab9ff2;}
+.bnav,.modal,.modal-bg .modal{background-color:#16213e;}
+.surface,.tok-item:hover,.set-row:hover,.mkt-row:hover{background-color:#1e2647;}
+.tok-name,.tok-usd,.hdr-title,.w-name,.bal-amount,.modal-title,.set-lbl,.det-big{color:#e8e6f8;}
+.tok-amt,.tok-pct,.bal-label,.act-label,.nav-lbl,.mkt-cap,.swap-box-lbl{color:#7a78a0;}
+.tok-pct.up,.bal-change{color:#54d890;}
+.tok-pct.dn{color:#ff6b6b;}
+.nav-it.active .nav-ico,.nav-it.active .nav-lbl,.tab.active,.back-btn{color:#ab9ff2;}
 body{font-family:'DM Sans',sans-serif;background:#131320;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;}
 
 /* Desktop: frame telefono */
@@ -58,7 +62,7 @@ box-shadow: none;
 padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 }
 .hdr {
-padding-top: calc(26px + env(safe-area-inset-top, 0px));
+padding-top: calc(52px + env(safe-area-inset-top, 0px));
 }
 .modal-bg {
 border-radius: 0;
@@ -156,7 +160,8 @@ border-radius: 0;
 .chip{display:flex;align-items:center;gap:6px;background:var(–surface);border:1px solid var(–border);border-radius:20px;padding:6px 12px 6px 7px;cursor:pointer;font-size:13px;font-weight:600;color:var(–text);transition:border-color .2s,background .2s;}
 .chip:hover,.chip.sel{border-color:var(–purple);background:var(–purple-glow);}
 .chip-dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;}
-.btn-p:hover{background:var(–purple-dark);}
+.btn-p{width:100%;padding:15px;background:#ab9ff2;border:none;border-radius:13px;color:#fff;font-size:15px;font-weight:700;font-family:‘DM Sans’,sans-serif;cursor:pointer;box-shadow:0 4px 20px rgba(171,159,242,.3);margin-top:4px;-webkit-appearance:none;}
+.btn-p:hover{background:#8b7cf0;}
 .btn-p:active{transform:scale(.98);}
 
 /* RECEIVE QR */
@@ -290,7 +295,12 @@ pointer-events:none;
     </div>
     <div class="row-btns">
       <div class="icon-btn" onclick="showToast('Search')"><svg width="15" height="15"><use href="#ico-search"/></svg></div>
-      <div class="icon-btn" onclick="showToast('Options')"><svg width="4" height="16" viewBox="0 0 4 20" fill="currentColor"><circle cx="2" cy="2" r="2"/><circle cx="2" cy="10" r="2"/><circle cx="2" cy="18" r="2"/></svg></div>
+      <div class="icon-btn" onclick="location.reload()" title="Ricarica">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+      </div>
     </div>
   </div>
   <div class="bal-wrap">
